@@ -1,7 +1,7 @@
 {
-  "name": "start-repo",
+  "name": "cackes",
   "version": "1.0.0",
-  "description": "Стартовый пустой проект",
+  "description": "Торты на заказ",
   "main": "inex.html",
   "author": "Andrey",
   "license": "MIT",
@@ -59,7 +59,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/artisthire/start-repo.git"
+    "url": "git+https://github.com/artisthire/cackes.git"
   },
-  "homepage": "https://github.com/artisthire/start-repo#readme"
+  "homepage": "https://github.com/artisthire/cackes#readme"
 }
