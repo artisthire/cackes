@@ -1,0 +1,16 @@
+//отдельно подключаем файлы внешних библиотек
+//для этого используется gulp-file-include
+@@include('../../node_modules/normalize.css/normalize.css')
+@@include('../../node_modules/leaflet/dist/leaflet.css')
+
+
+//подключается файл для поддержки png-спрайта
+//внутри файла миксины и переменные для стилизации
+//@import 'mixins/sprite-png.scss';
+
+@import 'variables.scss';
+@import 'scaffolding.scss';
+
+
+@import '../blocks/visually-hidden.scss';
+

@@ -1,0 +1,111 @@
+<header class="main-header">
+
+  @@if (current_page === "index_html") {
+  <a class="main-header__logo">
+    <picture>
+      <source media="(min-width: 1250px)" srcset="img/mishka-logo--lg.svg">
+      <source media="(min-width: 768px)" srcset="img/mishka-logo--md.svg">
+      <img src="img/mishka-logo--sm.svg" alt="Логотип магазина Mishka" width="86" height="35">
+    </picture>
+  </a>
+  }
+
+  @@if (current_page !== "index_html") {
+  <a class="main-header__logo" href="index.html">
+    <picture>
+      <source media="(min-width: 1250px)" srcset="img/mishka-logo--lg.svg">
+      <source media="(min-width: 768px)" srcset="img/mishka-logo--md.svg">
+      <img src="img/mishka-logo--sm.svg" alt="Логотип магазина Mishka" width="86" height="35">
+    </picture>
+  </a>
+  }
+
+  <!--DEV Для открытия меню к кнопке нужно добавлять класс menu-toggle-btn--open -->
+  <!--DEV Для закрытия меню к кнопке нужно добавлять класс menu-toggle-btn--close -->
+  <button class="main-header__toggle-btn menu-toggle-btn menu-toggle-btn--open js-menu-toggle-btn" name="toggle-menu" type="button" aria-label="Закрыть меню" hidden>
+    <span class="menu-toggle-btn__container">
+      <span class="menu-toggle-btn__line"></span>
+    </span>
+  </button>
+
+  <nav class="site-navigation">
+
+    <!--DEV Переключение активного пункта меню выполняется добавлением класса site-navigation__item--current к элементам списка -->
+    <!--DEV Переключение активного пункта подменю выполняется добавлением класса extend-navigation__item--current к элементам списка -->
+    <ul class="site-navigation__list">
+      @@if (current_page === "index_html") {
+      <li class="site-navigation__item">
+        <a href="catalog.html">Каталог товаров</a>
+
+        <ul class="site-navigation__extend-navigation extend-navigation">
+          <li class="extend-navigation__item">
+            <a href="new_product.html">Новые поступления</a>
+          </li>
+          <li class="extend-navigation__item">
+            <a href="sale.html">Распродажа</a>
+          </li>
+        </ul>
+      </li>
+      <li class="site-navigation__item">
+        <a href="form.html">Вязание на заказ</a>
+      </li>
+      }
+      @@if (current_page === "catalog_html") {
+      <li class="site-navigation__item site-navigation__item--current">
+        <a>Каталог товаров</a>
+
+        <ul class="site-navigation__extend-navigation extend-navigation">
+          <li class="extend-navigation__item">
+            <a href="new_product.html">Новые поступления</a>
+          </li>
+          <li class="extend-navigation__item">
+            <a href="sale.html">Распродажа</a>
+          </li>
+        </ul>
+      </li>
+      <li class="site-navigation__item">
+        <a href="form.html">Вязание на заказ</a>
+      </li>
+      }
+      @@if (current_page === "form_html") {
+      <li class="site-navigation__item">
+        <a href="catalog.html">Каталог товаров</a>
+
+        <ul class="site-navigation__extend-navigation extend-navigation">
+          <li class="extend-navigation__item">
+            <a href="new_product.html">Новые поступления</a>
+          </li>
+          <li class="extend-navigation__item">
+            <a href="sale.html">Распродажа</a>
+          </li>
+        </ul>
+      </li>
+      <li class="site-navigation__item site-navigation__item--current">
+        <a>Вязание на заказ</a>
+      </li>
+      }
+    </ul>
+
+    <ul class="user-navigation">
+      <li class="user-navigation__item">
+        <a class="user-navigation__link user-navigation__link--search" href="search.html">
+          <svg role="presentation" aria-hidden="true" width="18" height="18" focusable="false">
+            <use xlink:href="#icon-search"></use>
+          </svg>
+          <span class="user-navigation__search-text">Поиск по сайту</span>
+        </a>
+      </li>
+      <li class="user-navigation__item">
+        <a class="user-navigation__link" href="cart.html">
+          <svg role="presentation" aria-hidden="true" width="21" height="18" focusable="false">
+            <use xlink:href="#icon-cart"></use>
+          </svg>
+          Корзина: пока пуста
+        </a>
+      </li>
+    </ul>
+
+  </nav>
+
+  <p class="main-header__info">Бесплатная доставка по России</p>
+</header>

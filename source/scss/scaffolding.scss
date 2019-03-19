@@ -1,0 +1,43 @@
+/* open-sans-regular - latin_cyrillic */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Open Sans Regular'), local('OpenSans-Regular'),
+       url('../fonts/open-sans-v15-latin_cyrillic-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('../fonts/open-sans-v15-latin_cyrillic-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* open-sans-700 - latin_cyrillic */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: local('Open Sans Bold'), local('OpenSans-Bold'),
+       url('../fonts/open-sans-v15-latin_cyrillic-700.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('../fonts/open-sans-v15-latin_cyrillic-700.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+
+body {
+  position: relative;
+  min-width: $screen-sm;
+  max-width: $screen-lg;
+  margin: 0 auto;
+  font-family: $main-fonts;
+  font-size: $font-size--sm;
+  line-height: $line-height--sm;
+  color: $text-color;
+  background-color: $white;
+
+  @media (min-width: $screen-md) {
+    font-size: $font-size--md;
+    line-height: $line-height--md;
+  }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}

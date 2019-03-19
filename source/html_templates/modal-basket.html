@@ -1,0 +1,43 @@
+<!--DEV Показывается путем добавления класса modal-basket--show -->
+<div class="modal-basket js-modal-basket" id="modal-basket" role="dialog" aria-labelledby="modal-basket-title">
+
+  <p class="modal-basket__title" id="modal-basket-title">Добавить в&nbsp;корзину</p>
+
+  <form class="modal-basket__form" action="https://echo.htmlacademy.ru/" method="post">
+
+    <fieldset class="modal-basket__form-field">
+
+      <legend class="modal-basket__form-legend">Выбирите размер:</legend>
+
+      <div class="modal-basket__select-container">
+        <p class="modal-basket__select-wrap">
+          <input class="visually-hidden" id="size-1" name="size" type="radio" value="Size S" checked>
+          <label class="modal-basket__size-btn" for="size-1">
+            S
+          </label>
+        </p>
+
+        <p class="modal-basket__select-wrap">
+          <input class="visually-hidden" id="size-2" name="size" type="radio" value="Size M">
+          <label class="modal-basket__size-btn" for="size-2">
+            M
+          </label>
+        </p>
+
+        <p class="modal-basket__select-wrap">
+          <input class="visually-hidden" id="size-3" name="size" type="radio" value="Size L">
+          <label class="modal-basket__size-btn" for="size-3">
+            L
+          </label>
+        </p>
+      </div>
+
+    </fieldset>
+
+    <button class="modal-basket__submit-btn" type="submit">Добавить</button>
+
+  </form>
+</div>
+
+<!--DEV Показывается путем добавления класса modal-backdrop--show -->
+<div class="modal-backdrop js-modal-backdrop"></div>
