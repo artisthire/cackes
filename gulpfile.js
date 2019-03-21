@@ -26,16 +26,8 @@ var imageInliner = require('postcss-image-inliner');
 var cssnano = require('cssnano');
 //var gcmq = require('gulp-group-css-media-queries');
 
-//var realFavicon = require ('gulp-real-favicon'); - генерация фавиконок
-var imagemin = require('gulp-imagemin');
-var webp = require('imagemin-webp');
-//var pngquant = require('imagemin-pngquant');
-//Для минимизации PNG используется отдельный плагин pngquant, поскольку imagemin-pngquant выдает ошибку
-var gulpPngquant = require('gulp-pngquant');
-
 var svgstore = require('gulp-svgstore');
 var svgmin = require('gulp-svgmin');
-var cheerio = require('gulp-cheerio');
 
 var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
@@ -251,58 +243,81 @@ gulp.task('js:copy', function(done) {
 
 });
 
-// Оптимизация изображений
-gulp.task('img:opt', function () {
+
+// Ручная оптимизация изображений
+// Запуск folder=source/img dest=build/img npm start img:png
+var folder = process.env.folder;
+var dest = process.env.dest;
+
+//!!! gulp-pngquant - нормально не оптимизирует
+//!!! imagemin-pngquant - не запускается
+//!!! оптимизирую с помощью скачанной утилиты optipng-0.7.7-win32: start optipng.exe -o7 /D/work/cackes/source/img/*.png
+gulp.task('img:png', function () {
+
+  var imagemin = require('gulp-imagemin');
+  //var optipng = require('imagemin-optipng');
+  //var pngquant = require('imagemin-pngquant');
+  //Для минимизации PNG используется отдельный плагин pngquant, поскольку imagemin-pngquant выдает ошибку
+  var gulpPngquant = require('gulp-pngquant');
+  //var pngquant = require('imagemin-pngquant');
 
   console.log('---------- Оптимизация картинок');
-  return gulp.src(patch.src.img + '*.{jpg,jpeg,gif,svg,png}')
-    .pipe(changed(patch.build.img))
-    .pipe(gulpIf(isDev, debug({'title':' image:opt'})))
-    .pipe(
-      gulpIf(function (file) { return file.extname == '.png';},
-
-      gulpPngquant({quality: '65-80'}),
-
-      imagemin([
-    	imagemin.gifsicle({interlaced: true}),
-    	imagemin.jpegtran({progressive: true}),
-    	imagemin.svgo({removeViewBox: false})
-      ])
-    ))
-    .pipe(gulp.dest(patch.build.img))
-    .pipe(browserSync.reload({stream:true}));
+  return gulp.src(folder + '/*.png')
+    .pipe(debug({'title':' image:png'}))
+    .pipe(gulpPngquant({quality: '50-80'}))
+    //.pipe(imagemin([imagemin.optipng({optimizationLevel: 5})]))
+    .pipe(gulp.dest(dest + '/'));
 });
 
-gulp.task('img:webp', function () {
+//Оптимизация jpeg
+// Запуск folder=source/img dest=build/img npm start img:jpeg
+
+gulp.task('img:jpeg', function () {
+  var imagemin = require('gulp-imagemin');
+  var mozjpeg = require('imagemin-mozjpeg');
   //var webp = require('gulp-webp');
   console.log('---------- Создание картинок webp');
-  return gulp.src(patch.src.img+ '*.{jpg,jpeg,gif,png}')
-  .pipe(changed(patch.build.img, {extension: '.webp'}))
+  return gulp.src(folder + '/*.{jpg,jpeg}')
+  .pipe(debug({'title':' image:jpeg'}))
+  .pipe(imagemin([
+    mozjpeg({
+      quality: 75,
+      progressive: true
+    })
+  ]))
+  .pipe(gulp.dest(dest + '/'));
+});
+
+//Геренация картинок webp
+// Запуск folder=source/img dest=build/img npm start img:webp
+
+gulp.task('img:webp', function () {
+  var imagemin = require('gulp-imagemin');
+  var webp = require('imagemin-webp');
+  //var webp = require('gulp-webp');
+  console.log('---------- Создание картинок webp');
+  return gulp.src(folder + '/*.{jpg,jpeg,gif,png}')
+  .pipe(debug({'title':' image:webp'}))
   .pipe(imagemin([
     webp({
-      quality: 90
+      quality: 80
     })
   ]))
   .pipe(rename({extname: '.webp'}))
-  .pipe(gulpIf(isDev, debug({'title':' image:webp'})))
-  .pipe(gulp.dest(patch.build.img))
-  .pipe(browserSync.reload({stream:true}));
-
-  // return gulp.src(source_img + '*.{jpg,jpeg,gif,png}')
-  // .pipe(changed(build_img, {extension: '.webp'}))
-  // .pipe(debug({'title':' image:webp'}))
-  // .pipe(webp({quality: 90}))
-  // .pipe(gulp.dest(build_img))
-  // .pipe(browserSync.reload({stream:true}));
+  .pipe(gulp.dest(dest + '/'));
 });
 
-// gulp.task('img', function() {
-//   console.log('---------- Копирование картинок');
-//   return gulp.src([source_img_webp + '*', source_img_optim + '*'])
-//   .pipe(changed(build_img))
-//   .pipe(gulp.dest(build_img))
-//   .pipe(browserSync.reload({stream:true}));
-// });
+//Запуск folder=source/img dest=build/img npm start img:opt
+gulp.task('img:opt', gulp.series('img:jpeg','img:webp'))
+
+//копирование картинок в корень директории сайта
+gulp.task('img:copy', function() {
+  console.log('---------- Копирование фавиконок');
+  return gulp.src(patch.src.img + '*.{jpg,jpeg,gif,svg,png}')
+  .pipe(changed(patch.build.img))
+  .pipe(gulp.dest(patch.build.img))
+  .pipe(browserSync.reload({stream:true}));
+});
 
 //копирование фавиконок в корень директории сайта
 gulp.task('favicon', function() {
@@ -316,37 +331,36 @@ gulp.task('favicon', function() {
 gulp.task('sprite:svg', function() {
 
   if(patch.src.svg_sprite && patch.src.svg_sprite != '') {
-     console.log('---------- Сборка SVG спрайта');
-     return gulp.src(patch.src.svg_sprite + '*.svg')
-       .pipe(svgmin({
-         plugins: [
-           {minifyStyles: true},
-           {cleanupIDs: {
-             minify: true
-           }}
-         ]
-       }))
-       .pipe(svgstore({ inlineSvg: true}))
-       .pipe(cheerio({
-         run: function($) {
-           // используется при инлайнинге в html, для IE11 только инлайнинг
-           $('svg').attr('style',  'display:none');
-           // используется при внешнем спрайте для изменения цвета через color
-           //$('symbol').attr('fill',  'currentColor');
-         },
-         parserOptions: {
-           xmlMode: true
-         }
-       }))
-       .pipe(rename('sprite-svg.svg'))
-       //.pipe(gulpIf(!isDev, rev()))
-       .pipe(gulp.dest(patch.src.svg_sprite + 'img/'));
-       // .pipe(gulpIf(!isDev, rev.manifest(
-       //   patch.build.root + 'rev-manifest.json',
-       //   { base: patch.build.root,
-       //   merge: true
-       // })))
-       // .pipe(gulpIf(!isDev, gulp.dest(patch.build.root)));
+    //var cheerio = require('gulp-cheerio');
+    console.log('---------- Сборка SVG спрайта');
+    return gulp.src(patch.src.svg_sprite + '*.svg')
+      .pipe(svgmin({
+        plugins: [
+          {minifyStyles: true},
+          {cleanupIDs: {
+            minify: true
+          }}
+        ]
+      }))
+      .pipe(svgstore({ inlineSvg: true}))
+      /*.pipe(cheerio({
+        run: function($) {
+          // используется при внешнем спрайте для изменения цвета через color
+          //$('symbol').attr('fill',  'currentColor');
+        },
+        parserOptions: {
+         xmlMode: true
+        }
+      }))*/
+      .pipe(rename('sprite-svg.svg'))
+      //.pipe(gulpIf(!isDev, rev()))
+      .pipe(gulp.dest(patch.src.svg_sprite + 'img/'));
+      // .pipe(gulpIf(!isDev, rev.manifest(
+      //   patch.build.root + 'rev-manifest.json',
+      //   { base: patch.build.root,
+      //   merge: true
+      // })))
+      // .pipe(gulpIf(!isDev, gulp.dest(patch.build.root)));
 
    }
    else {
@@ -413,7 +427,7 @@ gulp.task('revreplace', function(done) {
 
 gulp.task('clean', function(done) {
   console.log('---------- Очистка рабочей директории');
-  del.sync(patch.build.root + '*');
+  del.sync(patch.build.root + '*', '!'+ patch.build.img + "*");
   done();
 });
 
@@ -437,8 +451,7 @@ gulp.task('watch', function() {
   if (patch.src.copy_js && patch.src.copy_js != '')
     gulp.watch(patch.src.copy_js, gulp.series('js:copy'));
 
-  gulp.watch(patch.src.img + '*.{jpg,jpeg,gif,png}', gulp.series('img:opt', 'img:webp'));
-  gulp.watch(patch.src.img + '*.svg', gulp.series('img:opt'));
+  gulp.watch(patch.src.img + '*.{jpg,jpeg,gif,svg,png}', gulp.series('img:copy'));
   gulp.watch(patch.src.favicon, gulp.series('favicon'));
 
   gulp.watch(patch.src.fonts, gulp.series('font'));
@@ -456,8 +469,8 @@ gulp.task('watch', function() {
 
 //по умолчанию запускаются задачи необходимые для продакшина
 gulp.task('build', gulp.series(
-  'clean', 'sprite:svg', 'sprite:png', 'img:opt', 'img:webp',
-  gulp.parallel('html', 'style', 'style:copy', 'js', 'js:copy', 'favicon', 'font'),
+  'clean', 'sprite:svg', 'sprite:png',
+  gulp.parallel('html', 'style', 'style:copy', 'js', 'js:copy', 'img:copy', 'favicon', 'font'),
   'revreplace'
 ));
 

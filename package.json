@@ -41,6 +41,7 @@
     "gulp-webp": "^4.0.1",
     "gulp.spritesmith": "^6.9.0",
     "imagemin": "^6.1.0",
+    "imagemin-mozjpeg": "^8.0.0",
     "imagemin-webp": "^5.0.0",
     "merge-stream": "^1.0.1",
     "postcss-image-inliner": "^3.0.0",
