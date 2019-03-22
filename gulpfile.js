@@ -245,27 +245,20 @@ gulp.task('js:copy', function(done) {
 
 
 // Ручная оптимизация изображений
-// Запуск folder=source/img dest=build/img npm start img:png
 var folder = process.env.folder;
 var dest = process.env.dest;
 
-//!!! gulp-pngquant - нормально не оптимизирует
-//!!! imagemin-pngquant - не запускается
-//!!! оптимизирую с помощью скачанной утилиты optipng-0.7.7-win32: start optipng.exe -o7 /D/work/cackes/source/img/*.png
+// Запуск folder=source/img dest=build/img npm start img:png
 gulp.task('img:png', function () {
 
   var imagemin = require('gulp-imagemin');
-  //var optipng = require('imagemin-optipng');
-  //var pngquant = require('imagemin-pngquant');
-  //Для минимизации PNG используется отдельный плагин pngquant, поскольку imagemin-pngquant выдает ошибку
-  var gulpPngquant = require('gulp-pngquant');
-  //var pngquant = require('imagemin-pngquant');
+  var optipng = require('imagemin-optipng');
 
-  console.log('---------- Оптимизация картинок');
+  console.log('---------- Оптимизация картинок PNG');
   return gulp.src(folder + '/*.png')
     .pipe(debug({'title':' image:png'}))
-    .pipe(gulpPngquant({quality: '50-80'}))
-    //.pipe(imagemin([imagemin.optipng({optimizationLevel: 5})]))
+    //.pipe(gulpPngquant({quality: '50-80'}))
+    .pipe(imagemin([imagemin.optipng({optimizationLevel: 5})]))
     .pipe(gulp.dest(dest + '/'));
 });
 
@@ -276,16 +269,16 @@ gulp.task('img:jpeg', function () {
   var imagemin = require('gulp-imagemin');
   var mozjpeg = require('imagemin-mozjpeg');
   //var webp = require('gulp-webp');
-  console.log('---------- Создание картинок webp');
+  console.log('---------- Оптимизация картинок JPEG');
   return gulp.src(folder + '/*.{jpg,jpeg}')
-  .pipe(debug({'title':' image:jpeg'}))
-  .pipe(imagemin([
-    mozjpeg({
-      quality: 75,
-      progressive: true
-    })
-  ]))
-  .pipe(gulp.dest(dest + '/'));
+    .pipe(debug({'title':' image:jpeg'}))
+    .pipe(imagemin([
+      mozjpeg({
+        quality: 75,
+        progressive: true
+      })
+    ]))
+    .pipe(gulp.dest(dest + '/'));
 });
 
 //Геренация картинок webp
@@ -295,25 +288,47 @@ gulp.task('img:webp', function () {
   var imagemin = require('gulp-imagemin');
   var webp = require('imagemin-webp');
   //var webp = require('gulp-webp');
-  console.log('---------- Создание картинок webp');
+  console.log('---------- Создание картинок WEBP');
   return gulp.src(folder + '/*.{jpg,jpeg,gif,png}')
   .pipe(debug({'title':' image:webp'}))
   .pipe(imagemin([
     webp({
-      quality: 80
+      quality: 75
     })
   ]))
   .pipe(rename({extname: '.webp'}))
   .pipe(gulp.dest(dest + '/'));
 });
 
+//Оптимизация картинок svg
+// Запуск folder=source/img dest=build/img npm start img:svg
+
+gulp.task('img:svg', function() {
+
+  var svgmin = require('gulp-svgmin');
+
+  console.log('---------- Оптимизация картинок SVG');
+  return gulp.src(folder + '/*.svg')
+    .pipe(debug({'title':' image:svg'}))
+    .pipe(svgmin({
+      plugins: [
+        {minifyStyles: true},
+        {cleanupIDs: {
+          minify: true
+        }}
+      ]
+    }))
+    .pipe(gulp.dest(dest + '/'));
+});
+
+//Ручная оптимизация всех изображений
 //Запуск folder=source/img dest=build/img npm start img:opt
-gulp.task('img:opt', gulp.series('img:jpeg','img:webp'))
+gulp.task('img:opt', gulp.series(gulp.parallel('img:png', 'img:jpeg', 'img:svg'), 'img:webp'));
 
 //копирование картинок в корень директории сайта
 gulp.task('img:copy', function() {
-  console.log('---------- Копирование фавиконок');
-  return gulp.src(patch.src.img + '*.{jpg,jpeg,gif,svg,png}')
+  console.log('---------- Копирование картинок');
+  return gulp.src(patch.src.img + '*.{jpg,jpeg,gif,svg,png,webp}')
   .pipe(changed(patch.build.img))
   .pipe(gulp.dest(patch.build.img))
   .pipe(browserSync.reload({stream:true}));
