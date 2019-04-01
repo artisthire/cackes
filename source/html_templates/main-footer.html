@@ -1,54 +1,50 @@
 <footer class="wrapper main-footer">
 
-  @@if (current_page === "index_html") {
-  <a class="main-footer__logo">
-    <svg role="img" aria-label="Логотип магазина Mishka" width="102" height="34" focusable="false">
-      <use xlink:href="#logo-footer"></use>
-    </svg>
-  </a>
-  }
+  <p class="main-footer__logo">
+    Cackes
+  </p>
 
-  @@if (current_page !== "index_html") {
-  <a class="main-footer__logo" href="index.html">
-    <svg role="img" aria-label="Логотип магазина Mishka" width="102" height="34" focusable="false">
-      <use xlink:href="#logo-footer"></use>
-    </svg>
-  </a>
-  }
-
-  <ul class="main-footer__social social-links">
-    <li class="social-links__item">
-      <a class="social-links__link social-links__link--insta" href="https://www.instagram.com/mishka/">
-        <span class="visually-hidden">Мы в Инстаграме</span>
-        <svg role="presentation" aria-hidden="true" width="22" height="21" focusable="false">
-          <use xlink:href="#icon-insta"></use>
-        </svg>
-      </a>
+  <ul class="main-footer__navigation footer-navigation">
+    <li class="footer-navigation__item">
+      <a class="footer-navigation__link" href="#our_cackes">Наши торты</a>
     </li>
-    <li class="social-links__item">
-      <a class="social-links__link social-links__link--fb" href="https://www.facebook.com/mishka/">
-        <span class="visually-hidden">Мы в Фейсбуке</span>
-        <svg role="presentation" aria-hidden="true" width="15" height="28" focusable="false">
-          <use xlink:href="#icon-fb"></use>
-        </svg>
-      </a>
+    <li class="footer-navigation__item">
+      <a class="footer-navigation__link" href="#individual_order">Индивидуальный заказ</a>
     </li>
-    <li class="social-links__item">
-      <a class="social-links__link social-links__link--tw" href="https://twitter.com/mishka?lang=ru">
-        <span class="visually-hidden">Мы в Твиттере</span>
-        <svg role="presentation" aria-hidden="true" width="23" height="20" focusable="false">
-          <use xlink:href="#icon-tw"></use>
-        </svg>
-      </a>
+    <li class="footer-navigation__item">
+      <a class="footer-navigation__link" href="#reviews">Отзывы</a>
+    </li>
+    <li class="footer-navigation__item">
+      <a class="footer-navigation__link" href="#about">О нас</a>
+    </li>
+    <li class="footer-navigation__item">
+      <a class="footer-navigation__link" href="#how_order">Как заказать</a>
+    </li>
+    <li class="footer-navigation__item">
+      <a class="footer-navigation__link" href="#contacts">Контакты</a>
     </li>
   </ul>
 
-  <div class="main-footer__copyright copyright">
-    <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
-      Разработано
-      <svg class="copyright__icon" role="img" aria-label="HTML Academy" width="27" height="34" focusable="false">
-        <use xlink:href="#icon-htmlacademy"></use>
+  <a class="main-footer__info" href="tel:+79068999296"><span class="visually-hidden">Наш телефон: </span>+7 906 899 92 96</a>
+
+  <address class="main-footer__authors authors-info">
+    <a class="authors-info__link authors-info__link--insta" href="https://www.instagram.com/authors/">
+      <span class="visually-hidden">Автор в Инстаграме</span>
+      <svg role="presentation" aria-hidden="true" width="23" height="23" focusable="false">
+        <use xlink:href="#icon-insta"></use>
       </svg>
     </a>
-  </div>
+
+    <a class="authors-info__link authors-info__link--vk" href="https://www.vk.com/authors/">
+      <span class="visually-hidden">Автор в Вконтакте</span>
+      <svg role="presentation" aria-hidden="true" width="31" height="27" focusable="false">
+        <use xlink:href="#icon-vk"></use>
+      </svg>
+    </a>
+
+    <p class="authors-info__copyright">
+      © 2018 Cakes
+    </p>
+  </address>
+
 </footer>
