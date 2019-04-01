@@ -26,8 +26,9 @@ var imageInliner = require('postcss-image-inliner');
 var cssnano = require('cssnano');
 //var gcmq = require('gulp-group-css-media-queries');
 
-var svgstore = require('gulp-svgstore');
 var svgmin = require('gulp-svgmin');
+var svgstore = require('gulp-svgstore');
+var cheerio = require('gulp-cheerio');
 
 var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
@@ -47,7 +48,8 @@ var patch = {
     fonts: 'source/fonts/*.{woff,woff2}',
     copy_css: '',
     copy_js: 'source/libs/js/*.js',
-    svg_sprite: 'source/img/sprite-svg/',
+    svg_sprite_inl: 'source/img/sprite-svg/inline/',
+    svg_sprite_ext: 'source/img/sprite-svg/external/',
     img_sprite: '',
     img_to_bg: 'source/img/inline_img_to_css/',
     svg_inline: 'source/img/inline_svg_to_css/'
@@ -56,8 +58,8 @@ var patch = {
     root: 'build/',
     css: 'build/css/',
     img: 'build/img/',
-    svg_sprite: 'build/img/sprite-svg/',
-    img_sprite: 'build/img/sprite-png/',
+    svg_sprite: 'build/img/',
+    img_sprite: 'build/img/',
     favicon: 'build/favicon/',
     fonts: 'build/fonts/',
     js: 'build/js/'
@@ -65,7 +67,8 @@ var patch = {
   libs: {
     js: [
       'node_modules/leaflet/dist/leaflet-src.js',
-      'node_modules/picturefill/dist/picturefill.js'
+      'node_modules/picturefill/dist/picturefill.js',
+      'node_modules/svgxuse/svgxuse.js'
     ]
   }
 };
@@ -343,12 +346,13 @@ gulp.task('favicon', function() {
   .pipe(browserSync.reload({stream:true}));
 });
 
-gulp.task('sprite:svg', function() {
+gulp.task('sprite:svg_inl', function() {
 
-  if(patch.src.svg_sprite && patch.src.svg_sprite != '') {
-    //var cheerio = require('gulp-cheerio');
-    console.log('---------- Сборка SVG спрайта');
-    return gulp.src(patch.src.svg_sprite + '*.svg')
+  if(patch.src.svg_sprite_inl && patch.src.svg_sprite_inl != '') {
+
+    console.log('---------- Сборка Inline SVG спрайта');
+    return gulp.src(patch.src.svg_sprite_inl + '*.svg')
+      .pipe(gulpIf(isDev, debug({'title':'svg_sprite:inline'})))
       .pipe(svgmin({
         plugins: [
           {minifyStyles: true},
@@ -357,19 +361,50 @@ gulp.task('sprite:svg', function() {
           }}
         ]
       }))
-      .pipe(svgstore({ inlineSvg: true}))
-      /*.pipe(cheerio({
+      .pipe(svgstore({inlineSvg: true}))
+      .pipe(cheerio({
+            run: function ($) {
+                $('svg').attr('style',  'display:none');
+            },
+            parserOptions: { xmlMode: true }
+        }))
+      .pipe(rename('sprite-svg.svg'))
+      .pipe(gulp.dest(patch.src.svg_sprite_inl + 'img/'));
+   }
+
+   else {
+     console.log('---------- Сборка Inline SVG спрайта: ОТМЕНА, не используется на проекте');
+   }
+});
+
+gulp.task('sprite:svg_ext', function() {
+
+  if(patch.src.svg_sprite_ext && patch.src.svg_sprite_ext != '') {
+    console.log('---------- Сборка External SVG спрайта');
+
+    return gulp.src(patch.src.svg_sprite_ext + '*.svg')
+      .pipe(gulpIf(isDev, debug({'title':'svg_sprite:external'})))
+      .pipe(svgmin({
+        plugins: [
+          {minifyStyles: true},
+          {cleanupIDs: {
+            minify: true
+          }}
+        ]
+      }))
+      .pipe(svgstore({inlineSvg: false}))
+      .pipe(cheerio({
         run: function($) {
           // используется при внешнем спрайте для изменения цвета через color
-          //$('symbol').attr('fill',  'currentColor');
+          $('symbol').attr('fill',  'currentColor');
         },
         parserOptions: {
          xmlMode: true
         }
-      }))*/
+      }))
       .pipe(rename('sprite-svg.svg'))
       //.pipe(gulpIf(!isDev, rev()))
-      .pipe(gulp.dest(patch.src.svg_sprite + 'img/'));
+      .pipe(gulp.dest(patch.build.svg_sprite));
       // .pipe(gulpIf(!isDev, rev.manifest(
       //   patch.build.root + 'rev-manifest.json',
       //   { base: patch.build.root,
@@ -379,7 +414,7 @@ gulp.task('sprite:svg', function() {
 
    }
    else {
-     console.log('---------- Сборка SVG спрайта: ОТМЕНА, не используется на проекте');
+     console.log('---------- Сборка External SVG спрайта: ОТМЕНА, не используется на проекте');
    }
 });
 
@@ -474,9 +509,11 @@ gulp.task('watch', function() {
   gulp.watch(patch.src.img_to_bg + '*', gulp.series('style'));
   gulp.watch(patch.src.svg_inline + '*.svg', gulp.series('style'));
 
-  if(patch.src.svg_sprite && patch.src.svg_sprite != '')
-    gulp.watch(patch.src.svg_sprite + '*.svg', gulp.series('sprite:svg', 'html')); //требуется инклюд итогового спрайта в html
-    //gulp.watch(patch.src.svg_sprite + '*.svg', gulp.series('sprite:svg')); - ватчер при подключении svg#extend
+  if(patch.src.svg_sprite_inl && patch.src.svg_sprite_inl != '')
+    gulp.watch(patch.src.svg_sprite_inl + '*.svg', gulp.series('sprite:svg_inl', 'html')); //требуется инклюд итогового спрайта в html
+
+   if(patch.src.svg_sprite_ext && patch.src.svg_sprite_ext != '')
+    gulp.watch(patch.src.svg_sprite_ext + '*.svg', gulp.series('sprite:svg_ext'));// - ватчер при подключении svg#extend
 
   if(patch.src.img_sprite && patch.src.img_sprite != '')
     gulp.watch(patch.src.img_sprite + '*.png', gulp.series('sprite:png', 'style'));
@@ -484,8 +521,8 @@ gulp.task('watch', function() {
 
 //по умолчанию запускаются задачи необходимые для продакшина
 gulp.task('build', gulp.series(
-  'clean', 'sprite:svg', 'sprite:png',
-  gulp.parallel('html', 'style', 'style:copy', 'js', 'js:copy', 'img:copy', 'favicon', 'font'),
+  'clean', 'sprite:svg_inl', 'sprite:png',
+  gulp.parallel('html', 'style', 'style:copy', 'js', 'js:copy', 'sprite:svg_ext', 'img:copy', 'favicon', 'font'),
   'revreplace'
 ));
 
