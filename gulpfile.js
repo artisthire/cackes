@@ -501,7 +501,7 @@ gulp.task('watch', function() {
   if (patch.src.copy_js && patch.src.copy_js != '')
     gulp.watch(patch.src.copy_js, gulp.series('js:copy'));
 
-  gulp.watch(patch.src.img + '*.{jpg,jpeg,gif,svg,png}', gulp.series('img:copy'));
+  gulp.watch(patch.src.img + '*.{jpg,jpeg,gif,svg,png,webp}', gulp.series('img:copy'));
   gulp.watch(patch.src.favicon, gulp.series('favicon'));
 
   gulp.watch(patch.src.fonts, gulp.series('font'));

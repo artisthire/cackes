@@ -48,7 +48,7 @@
 
         <a href="#" class="product-card__link">
 
-          <p class="product-card__title">Классические</p>
+          <h4 class="product-card__title">Классические</h4>
 
           <p class="product-card__desc">24 вида</p>
 
@@ -60,7 +60,7 @@
             <source media="(min-width: 1366px)" srcset="img/Классический--lg.jpg">
             <source media="(min-width: 768px)" srcset="img/Классический--md.jpg">
 
-            <img class="product-card__img" src="img/Классический--sm@1x.jpg" srcset="img/Классический--sm@2x.jpg 2x" alt="Торт классический">
+            <img class="product-card__img" src="img/Классический--sm@1x.jpg" srcset="img/Классический--sm@2x.jpg 2x" alt="Торт классический" width="242" height="153">
           </picture>
         </a>
 
@@ -70,14 +70,14 @@
 
         <a href="#" class="product-card__link">
 
-          <p class="product-card__title">Муссовые</p>
+          <h4 class="product-card__title">Муссовые</h4>
 
           <p class="product-card__desc">12 видов</p>
 
           <picture class="product-card__img-wrap">
             <source type="image/webp" srcset="img/Муссовый@1x.webp 1x, img/Муссовый@2x.webp 2x">
 
-            <img class="product-card__img" src="img/Муссовый@1x.jpg" srcset="img/Муссовый@2x.jpg 2x" alt="Торт муссовый">
+            <img class="product-card__img" src="img/Муссовый@1x.jpg" srcset="img/Муссовый@2x.jpg 2x" alt="Торт муссовый" width="242" height="153" >
           </picture>
         </a>
 
@@ -87,14 +87,14 @@
 
         <a href="#" class="product-card__link">
 
-          <p class="product-card__title">Свадебные</p>
+          <h4 class="product-card__title">Свадебные</h4>
 
           <p class="product-card__desc">20 видов</p>
 
           <picture class="product-card__img-wrap">
             <source type="image/webp" srcset="img/Свадебный@1x.webp 1x, img/Свадебный@2x.webp 2x">
 
-            <img class="product-card__img" src="img/Свадебный@1x.jpg" srcset="img/Свадебный@2x.jpg 2x" alt="Торт свадебный">
+            <img class="product-card__img" src="img/Свадебный@1x.jpg" srcset="img/Свадебный@2x.jpg 2x" alt="Торт свадебный" width="242" height="153">
           </picture>
         </a>
 
@@ -104,14 +104,14 @@
 
         <a href="#" class="product-card__link">
 
-          <p class="product-card__title">Мужчинам</p>
+          <h4 class="product-card__title">Мужчинам</h4>
 
           <p class="product-card__desc">12 видов</p>
 
           <picture class="product-card__img-wrap">
             <source type="image/webp" srcset="img/Мужчинам@1x.webp 1x, img/Мужчинам@2x.webp 2x">
 
-            <img class="product-card__img" src="img/Мужчинам@1x.jpg" srcset="img/Мужчинам@2x.jpg 2x" alt="Торт для мужчин">
+            <img class="product-card__img" src="img/Мужчинам@1x.jpg" srcset="img/Мужчинам@2x.jpg 2x" alt="Торт для мужчин" width="242" height="153">
           </picture>
         </a>
 
@@ -121,14 +121,14 @@
 
         <a href="#" class="product-card__link">
 
-          <p class="product-card__title">Женщинам</p>
+          <h4 class="product-card__title">Женщинам</h4>
 
           <p class="product-card__desc">16 видов</p>
 
           <picture class="product-card__img-wrap">
             <source type="image/webp" srcset="img/Женщинам@1x.webp 1x, img/Женщинам@2x.webp 2x">
 
-            <img class="product-card__img" src="img/Женщинам@1x.jpg" srcset="img/Женщинам@2x.jpg 2x" alt="Торт для женщин">
+            <img class="product-card__img" src="img/Женщинам@1x.jpg" srcset="img/Женщинам@2x.jpg 2x" alt="Торт для женщин" width="242" height="153">
           </picture>
         </a>
 
@@ -138,7 +138,7 @@
 
         <a href="#" class="product-card__link">
 
-          <p class="product-card__title">Детские</p>
+          <h4 class="product-card__title">Детские</h4>
 
           <p class="product-card__desc">18 видов</p>
 
@@ -150,7 +150,7 @@
             <source media="(min-width: 1366px)" srcset="img/Детские--lg.jpg">
             <source media="(min-width: 768px)" srcset="img/Детские--md.jpg">
 
-            <img class="product-card__img" src="img/Детские--sm@1x.jpg" srcset="img/Детские--sm@2x.jpg 2x" alt="Торт для детей">
+            <img class="product-card__img" src="img/Детские--sm@1x.jpg" srcset="img/Детские--sm@2x.jpg 2x" alt="Торт для детей" width="242" height="153">
           </picture>
         </a>
 
@@ -167,21 +167,17 @@
 
     <form action="https://echo.htmlacademy.ru/" method="get" class="custom-orders__form form-orders">
 
-      <fieldset class="form-orders__step">
+      <div class="form-orders__step" hidden>
 
-        <legend class="form-orders__step-title">
-          <span class="form-orders__step-number">01</span> Выберите начинку
-        </legend>
+        <h4 class="form-orders__step-title">
+          <b class="form-orders__step-number">01</b> Выберите начинку
+        </h4>
 
         <ol class="select-stuffing">
 
           <li class="select-stuffing__item">
 
-            <label class="select-stuffing__title">
-              <input class="select-stuffing__input" name="stuffing" type="radio" value="type-1" checked> Шоколадный ганаш
-            </label>
-
-            <div class="select-stuffing__img-wrap" hidden>
+            <div class="select-stuffing__img-wrap">
               <picture>
                 <source type="image/webp" media="(min-width: 1366px)" srcset="img/Начинка-1--lg.webp">
                 <source type="image/webp" media="(min-width: 768px)" srcset="img/Начинка-1--md.webp">
@@ -193,6 +189,10 @@
                 <img class="select-stuffing__img" src="img/Начинка-1--sm@1x.png" srcset="img/Начинка-1--sm@2x.png 2x" alt="Шоколадный ганаш">
               </picture>
             </div>
+
+            <p class="select-stuffing__title">
+              <i>Шоколадный ганаш</i>
+            </p>
 
             <p class="select-stuffing__desc">
               Ароматный шоколадный бисквит, густой шоколадный крем – самый шоколадный из всех возможных десертов!
@@ -204,13 +204,9 @@
 
           </li>
 
-          <li class="select-stuffing__item">
+           <li class="select-stuffing__item">
 
-            <label class="select-stuffing__title">
-              <input class="select-stuffing__input" name="stuffing" type="radio" value="type-2"> Клубничный ганаш
-            </label>
-
-            <div class="select-stuffing__img-wrap" hidden>
+            <div class="select-stuffing__img-wrap">
               <picture>
                 <source type="image/webp" media="(min-width: 1366px)" srcset="img/Начинка-1--lg.webp">
                 <source type="image/webp" media="(min-width: 768px)" srcset="img/Начинка-1--md.webp">
@@ -219,26 +215,319 @@
                 <source media="(min-width: 1366px)" srcset="img/Начинка-1--lg.png">
                 <source media="(min-width: 768px)" srcset="img/Начинка-1--md.png">
 
-                <img class="select-stuffing__img" src="img/Начинка-1--sm@1x.png" srcset="img/Начинка-1--sm@2x.png 2x" alt="Шоколадный ганаш">
+                <img class="select-stuffing__img" src="img/Начинка-1--sm@1x.png" srcset="img/Начинка-1--sm@2x.png 2x" alt="Клубничный ганаш">
               </picture>
-
             </div>
 
+            <p class="select-stuffing__title">
+              <i>Клубничный ганаш</i>
+            </p>
+
             <p class="select-stuffing__desc">
-              Ароматный шоколадный бисквит, густой шоколадный крем – самый шоколадный из всех возможных десертов!
+              Ароматный клубничный бисквит, густой клубничный крем – самый клубничный из всех возможных десертов!
             </p>
 
             <p class="select-stuffing__price">
-              <b>1000 руб/кг</b>
+              <b>800 руб/кг</b>
+            </p>
+
+          </li>
+
+          <li class="select-stuffing__item">
+
+            <div class="select-stuffing__img-wrap">
+              <picture>
+                <source type="image/webp" media="(min-width: 1366px)" srcset="img/Начинка-1--lg.webp">
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/Начинка-1--md.webp">
+                <source type="image/webp" srcset="img/Начинка-1--sm@1x.webp 1x, img/Начинка-1--sm@2x.webp 2x">
+
+                <source media="(min-width: 1366px)" srcset="img/Начинка-1--lg.png">
+                <source media="(min-width: 768px)" srcset="img/Начинка-1--md.png">
+
+                <img class="select-stuffing__img" src="img/Начинка-1--sm@1x.png" srcset="img/Начинка-1--sm@2x.png 2x" alt="Огуречный ганаш">
+              </picture>
+            </div>
+
+            <p class="select-stuffing__title">
+              <i>Огуречный ганаш</i>
+            </p>
+
+            <p class="select-stuffing__desc">
+              Ароматный огуречный бисквит, густой огуречный крем – самый огуречный из всех возможных десертов!
+            </p>
+
+            <p class="select-stuffing__price">
+              <b>500 руб/кг</b>
+            </p>
+
+          </li>
+
+          <li class="select-stuffing__item">
+
+            <div class="select-stuffing__img-wrap">
+              <picture>
+                <source type="image/webp" media="(min-width: 1366px)" srcset="img/Начинка-1--lg.webp">
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/Начинка-1--md.webp">
+                <source type="image/webp" srcset="img/Начинка-1--sm@1x.webp 1x, img/Начинка-1--sm@2x.webp 2x">
+
+                <source media="(min-width: 1366px)" srcset="img/Начинка-1--lg.png">
+                <source media="(min-width: 768px)" srcset="img/Начинка-1--md.png">
+
+                <img class="select-stuffing__img" src="img/Начинка-1--sm@1x.png" srcset="img/Начинка-1--sm@2x.png 2x" alt="Вишневый ганаш">
+              </picture>
+            </div>
+
+            <p class="select-stuffing__title">
+              <i>Вишневый ганаш</i>
+            </p>
+
+            <p class="select-stuffing__desc">
+              Ароматный вишневый бисквит, густой вишневый крем – самый вишневый из всех возможных десертов!
+            </p>
+
+            <p class="select-stuffing__price">
+              <b>850 руб/кг</b>
+            </p>
+
+          </li>
+
+          <li class="select-stuffing__item">
+
+            <div class="select-stuffing__img-wrap">
+              <picture>
+                <source type="image/webp" media="(min-width: 1366px)" srcset="img/Начинка-1--lg.webp">
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/Начинка-1--md.webp">
+                <source type="image/webp" srcset="img/Начинка-1--sm@1x.webp 1x, img/Начинка-1--sm@2x.webp 2x">
+
+                <source media="(min-width: 1366px)" srcset="img/Начинка-1--lg.png">
+                <source media="(min-width: 768px)" srcset="img/Начинка-1--md.png">
+
+                <img class="select-stuffing__img" src="img/Начинка-1--sm@1x.png" srcset="img/Начинка-1--sm@2x.png 2x" alt="Апельсиновый ганаш">
+              </picture>
+            </div>
+
+            <p class="select-stuffing__title">
+              <i>Апельсиновый ганаш</i>
+            </p>
+
+            <p class="select-stuffing__desc">
+              Ароматный апельсиновый бисквит, густой апельсиновый крем – самый апельсиновый из всех возможных десертов!
+            </p>
+
+            <p class="select-stuffing__price">
+              <b>900 руб/кг</b>
+            </p>
+
+          </li>
+
+          <li class="select-stuffing__item">
+
+            <div class="select-stuffing__img-wrap">
+              <picture>
+                <source type="image/webp" media="(min-width: 1366px)" srcset="img/Начинка-1--lg.webp">
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/Начинка-1--md.webp">
+                <source type="image/webp" srcset="img/Начинка-1--sm@1x.webp 1x, img/Начинка-1--sm@2x.webp 2x">
+
+                <source media="(min-width: 1366px)" srcset="img/Начинка-1--lg.png">
+                <source media="(min-width: 768px)" srcset="img/Начинка-1--md.png">
+
+                <img class="select-stuffing__img" src="img/Начинка-1--sm@1x.png" srcset="img/Начинка-1--sm@2x.png 2x" alt="Зефирный ганаш">
+              </picture>
+            </div>
+
+            <p class="select-stuffing__title">
+              <i>Зефирный ганаш</i>
+            </p>
+
+            <p class="select-stuffing__desc">
+              Ароматный зефирный бисквит, густой зефирный крем – самый зефирный из всех возможных десертов!
+            </p>
+
+            <p class="select-stuffing__price">
+              <b>750 руб/кг</b>
+            </p>
+
+          </li>
+
+          <li class="select-stuffing__item">
+
+            <div class="select-stuffing__img-wrap">
+              <picture>
+                <source type="image/webp" media="(min-width: 1366px)" srcset="img/Начинка-1--lg.webp">
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/Начинка-1--md.webp">
+                <source type="image/webp" srcset="img/Начинка-1--sm@1x.webp 1x, img/Начинка-1--sm@2x.webp 2x">
+
+                <source media="(min-width: 1366px)" srcset="img/Начинка-1--lg.png">
+                <source media="(min-width: 768px)" srcset="img/Начинка-1--md.png">
+
+                <img class="select-stuffing__img" src="img/Начинка-1--sm@1x.png" srcset="img/Начинка-1--sm@2x.png 2x" alt="Цитрусовый ганаш">
+              </picture>
+            </div>
+
+            <p class="select-stuffing__title">
+              <i>Цитрусовый ганаш</i>
+            </p>
+
+            <p class="select-stuffing__desc">
+              Ароматный цитрусовый бисквит, густой цитрусовый крем – самый цитрусовый из всех возможных десертов!
+            </p>
+
+            <p class="select-stuffing__price">
+              <b>875 руб/кг</b>
+            </p>
+
+          </li>
+
+          <li class="select-stuffing__item">
+
+            <div class="select-stuffing__img-wrap">
+              <picture>
+                <source type="image/webp" media="(min-width: 1366px)" srcset="img/Начинка-1--lg.webp">
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/Начинка-1--md.webp">
+                <source type="image/webp" srcset="img/Начинка-1--sm@1x.webp 1x, img/Начинка-1--sm@2x.webp 2x">
+
+                <source media="(min-width: 1366px)" srcset="img/Начинка-1--lg.png">
+                <source media="(min-width: 768px)" srcset="img/Начинка-1--md.png">
+
+                <img class="select-stuffing__img" src="img/Начинка-1--sm@1x.png" srcset="img/Начинка-1--sm@2x.png 2x" alt="Мармеладный ганаш">
+              </picture>
+            </div>
+
+            <p class="select-stuffing__title">
+              <i>Мармеладный ганаш</i>
+            </p>
+
+            <p class="select-stuffing__desc">
+              Ароматный мармеладный бисквит, густой мармеладный крем – самый мармеладный из всех возможных десертов!
+            </p>
+
+            <p class="select-stuffing__price">
+              <b>999 руб/кг</b>
+            </p>
+
+          </li>
+
+          <li class="select-stuffing__item">
+
+            <div class="select-stuffing__img-wrap">
+              <picture>
+                <source type="image/webp" media="(min-width: 1366px)" srcset="img/Начинка-1--lg.webp">
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/Начинка-1--md.webp">
+                <source type="image/webp" srcset="img/Начинка-1--sm@1x.webp 1x, img/Начинка-1--sm@2x.webp 2x">
+
+                <source media="(min-width: 1366px)" srcset="img/Начинка-1--lg.png">
+                <source media="(min-width: 768px)" srcset="img/Начинка-1--md.png">
+
+                <img class="select-stuffing__img" src="img/Начинка-1--sm@1x.png" srcset="img/Начинка-1--sm@2x.png 2x" alt="Яблочный ганаш">
+              </picture>
+            </div>
+
+            <p class="select-stuffing__title">
+              <i>Яблочный ганаш</i>
+            </p>
+
+            <p class="select-stuffing__desc">
+              Ароматный яблочный бисквит, густой яблочный крем – самый яблочный из всех возможных десертов!
+            </p>
+
+            <p class="select-stuffing__price">
+              <b>450 руб/кг</b>
+            </p>
+
+          </li>
+
+          <li class="select-stuffing__item">
+
+            <div class="select-stuffing__img-wrap">
+              <picture>
+                <source type="image/webp" media="(min-width: 1366px)" srcset="img/Начинка-1--lg.webp">
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/Начинка-1--md.webp">
+                <source type="image/webp" srcset="img/Начинка-1--sm@1x.webp 1x, img/Начинка-1--sm@2x.webp 2x">
+
+                <source media="(min-width: 1366px)" srcset="img/Начинка-1--lg.png">
+                <source media="(min-width: 768px)" srcset="img/Начинка-1--md.png">
+
+                <img class="select-stuffing__img" src="img/Начинка-1--sm@1x.png" srcset="img/Начинка-1--sm@2x.png 2x" alt="Смородиновый ганаш">
+              </picture>
+            </div>
+
+            <p class="select-stuffing__title">
+              <i>Смородиновый ганаш</i>
+            </p>
+
+            <p class="select-stuffing__desc">
+              Ароматный смородиновый бисквит, густой смородиновый крем – самый смородиновый из всех возможных десертов!
+            </p>
+
+            <p class="select-stuffing__price">
+              <b>680 руб/кг</b>
+            </p>
+
+          </li>
+
+          <li class="select-stuffing__item">
+
+            <div class="select-stuffing__img-wrap">
+              <picture>
+                <source type="image/webp" media="(min-width: 1366px)" srcset="img/Начинка-1--lg.webp">
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/Начинка-1--md.webp">
+                <source type="image/webp" srcset="img/Начинка-1--sm@1x.webp 1x, img/Начинка-1--sm@2x.webp 2x">
+
+                <source media="(min-width: 1366px)" srcset="img/Начинка-1--lg.png">
+                <source media="(min-width: 768px)" srcset="img/Начинка-1--md.png">
+
+                <img class="select-stuffing__img" src="img/Начинка-1--sm@1x.png" srcset="img/Начинка-1--sm@2x.png 2x" alt="Ореховый ганаш">
+              </picture>
+            </div>
+
+            <p class="select-stuffing__title">
+              <i>Ореховый ганаш</i>
+            </p>
+
+            <p class="select-stuffing__desc">
+              Ароматный ореховый бисквит, густой ореховый крем – самый ореховый из всех возможных десертов!
+            </p>
+
+            <p class="select-stuffing__price">
+              <b>1150 руб/кг</b>
+            </p>
+
+          </li>
+
+          <li class="select-stuffing__item">
+
+            <div class="select-stuffing__img-wrap">
+              <picture>
+                <source type="image/webp" media="(min-width: 1366px)" srcset="img/Начинка-1--lg.webp">
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/Начинка-1--md.webp">
+                <source type="image/webp" srcset="img/Начинка-1--sm@1x.webp 1x, img/Начинка-1--sm@2x.webp 2x">
+
+                <source media="(min-width: 1366px)" srcset="img/Начинка-1--lg.png">
+                <source media="(min-width: 768px)" srcset="img/Начинка-1--md.png">
+
+                <img class="select-stuffing__img" src="img/Начинка-1--sm@1x.png" srcset="img/Начинка-1--sm@2x.png 2x" alt="Грушевый ганаш">
+              </picture>
+            </div>
+
+            <p class="select-stuffing__title">
+              <i>Грушевый ганаш</i>
+            </p>
+
+            <p class="select-stuffing__desc">
+              Ароматный грушевый бисквит, густой грушевый крем – самый грушевый из всех возможных десертов!
+            </p>
+
+            <p class="select-stuffing__price">
+              <b>600 руб/кг</b>
             </p>
 
           </li>
 
         </ol>
 
-        <p class="select-stuffing__slider-number" hidden>1/12</p>
+        <div class="select-stuffing__slider-number"></div>
 
-        <div class="form-orders__slider-indicator form-orders__slider-indicator--stuffing slider-indicator" hidden>
+        <div class="form-orders__slider-indicator form-orders__slider-indicator--stuffing slider-indicator">
           <span class="select-indicator select-indicator--current"></span>
           <span class="select-indicator"></span>
           <span class="select-indicator"></span>
@@ -246,15 +535,567 @@
           <span class="select-indicator select-indicator--more"></span>
         </div>
 
-        <div class="form-orders__slider-control slider-control">
-          <button class="slider-control slider-control--prev" type="button"><span class="visuallly-hidden">Предыдущий слайд</span></button>
-          <button class="slider-control slider-control--next" type="button"><span class="visuallly-hidden">Следующий слайд</span></button>
+        <div class="form-orders__slider-control slider-control" hidden>
+          <button class="slider-control slider-control--prev" type="button">
+            <span class="visually-hidden">Предыдущий слайд</span>
+            <svg role="presentation" aria-hidden="true" width="16" height="16" focusable="false">
+              <use xlink:href="#icon-arrow"></use>
+            </svg>
+          </button>
+          <button class="slider-control slider-control--next" type="button">
+            <span class="visually-hidden">Следующий слайд</span>
+            <svg role="presentation" aria-hidden="true" width="16" height="16" focusable="false">
+              <use xlink:href="#icon-arrow"></use>
+            </svg>
+          </button>
         </div>
-        <!--TODO: доделать пункты выбора начинки -->
 
-        <button class="form-orders__select-btn btn" type="button" hidden>Выбрать</button>
+      </div>
 
-      </fieldset>
+      <div class="form-orders__step" hidden>
+
+        <h4 class="form-orders__step-title">
+          <b class="form-orders__step-number">02</b> Размер
+        </h4>
+
+        <ol class="select-size">
+
+          <li class="select-size__item">
+
+            <figure class="select-size__img-wrap">
+              <figcaption>1 кг</figcaption>
+              <img src="img/1-ярус.svg" alt="Один ярус, 1кг" width="110" height="110">
+            </figure>
+
+            <p class="select-size__desc">
+              17-18 см
+              <b>(1 кг - 6 персон)</b>
+            </p>
+
+          </li>
+
+          <li class="select-size__item">
+
+            <figure class="select-size__img-wrap">
+              <figcaption>2 кг</figcaption>
+              <img src="img/1-ярус.svg" alt="Один ярус, 2кг" width="150" height="150">
+            </figure>
+
+            <p class="select-size__desc">
+              23-24 см
+              <b>(10-12 персон)</b>
+            </p>
+
+          </li>
+
+          <li class="select-size__item">
+
+            <figure class="select-size__img-wrap">
+              <figcaption>5 кг</figcaption>
+              <img src="img/2-яруса.svg" alt="Два яруса, 5кг" width="160" height="160">
+            </figure>
+
+            <p class="select-size__desc">
+              Два яруса 25 и 20 см
+              <b>(15-20 персон)</b>
+            </p>
+
+          </li>
+
+          <li class="select-size__item">
+
+            <figure class="select-size__img-wrap">
+              <figcaption>8 кг</figcaption>
+              <img src="img/3-яруса.svg" alt="Три яруса, 8кг" width="180" height="180">
+            </figure>
+
+            <p class="select-size__desc">
+              Три яруса 30, 25 и 18 см
+              <b>(25-30 персон)</b>
+            </p>
+
+          </li>
+
+        </ol>
+
+        <div class="form-orders__slider-indicator form-orders__slider-indicator--size slider-indicator">
+          <span class="select-indicator select-indicator--current"></span>
+          <span class="select-indicator"></span>
+          <span class="select-indicator"></span>
+          <span class="select-indicator"></span>
+        </div>
+
+      </div>
+
+      <div class="form-orders__step">
+
+        <div class="form-orders___step-wrapper" hidden>
+          <h4 class="form-orders__step-title">
+           <b class="form-orders__step-number">03</b> Оформление
+          </h4>
+
+          <ol class="select-decor">
+
+            <li class="select-decor_item">
+
+              <div class="select-decor__img-wrap">
+                <picture>
+                  <source type="image/webp" media="(min-width: 1366px)" srcset="img/Оформление-маршмэллоу--lg.webp">
+                  <source type="image/webp" media="(min-width: 768px)" srcset="img/Оформление-маршмэллоу--md.webp">
+                  <source type="image/webp" srcset="img/Оформление-маршмэллоу--sm@1x.webp 1x, img/Оформление-маршмэллоу--sm@2x.webp 2x">
+
+                  <source media="(min-width: 1366px)" srcset="img/Оформление-маршмэллоу--lg.jpg">
+                  <source media="(min-width: 768px)" srcset="img/Оформление-маршмэллоу--md.jpg">
+
+                  <img class="select-decor__img" src="img/Оформление-маршмэллоу--sm@1x.jpg" srcset="img/Оформление-маршмэллоу--sm@2x.jpg 2x" alt="Оформление маршмэллоу">
+                </picture>
+              </div>
+
+              <p class="select-decor__title">
+                <i>Маршмеллоу</i>
+              </p>
+
+              <p class="select-decor__price">
+                <b>600 руб/кг</b>
+              </p>
+
+            </li>
+
+            <li class="select-decor_item">
+
+              <div class="select-decor__img-wrap">
+                <picture>
+                  <source type="image/webp" media="(min-width: 1366px)" srcset="img/Оформление-ягодное--lg.webp">
+                  <source type="image/webp" media="(min-width: 768px)" srcset="img/Оформление-ягодное--md.webp">
+                  <source type="image/webp" srcset="img/Оформление-ягодное--sm@1x.webp 1x, img/Оформление-ягодное--sm@2x.webp 2x">
+
+                  <source media="(min-width: 1366px)" srcset="img/Оформление-ягодное--lg.jpg">
+                  <source media="(min-width: 768px)" srcset="img/Оформление-ягодное--md.jpg">
+
+                  <img class="select-decor__img" src="img/Оформление-ягодное--sm@1x.jpg" srcset="img/Оформление-маршмэллоу--sm@2x.jpg 2x" alt="Оформление маршмэллоу">
+                </picture>
+              </div>
+
+              <p class="select-decor__title">
+                <i>Ягодное ассорти</i>
+              </p>
+
+              <p class="select-decor__price">
+                <b>700 руб/кг</b>
+              </p>
+
+            </li>
+
+            <li class="select-decor_item">
+
+              <div class="select-decor__img-wrap">
+                <picture>
+                  <source type="image/webp" media="(min-width: 1366px)" srcset="img/Оформление-маршмэллоу--lg.webp">
+                  <source type="image/webp" media="(min-width: 768px)" srcset="img/Оформление-маршмэллоу--md.webp">
+                  <source type="image/webp" srcset="img/Оформление-маршмэллоу--sm@1x.webp 1x, img/Оформление-маршмэллоу--sm@2x.webp 2x">
+
+                  <source media="(min-width: 1366px)" srcset="img/Оформление-маршмэллоу--lg.jpg">
+                  <source media="(min-width: 768px)" srcset="img/Оформление-маршмэллоу--md.jpg">
+
+                  <img class="select-decor__img" src="img/Оформление-маршмэллоу--sm@1x.jpg" srcset="img/Оформление-маршмэллоу--sm@2x.jpg 2x" alt="Оформление маршмэллоу">
+                </picture>
+              </div>
+
+              <p class="select-decor__title">
+                <i>Маршмеллоу</i>
+              </p>
+
+              <p class="select-decor__price">
+                <b>600 руб/кг</b>
+              </p>
+
+            </li>
+
+           <li class="select-decor_item">
+
+             <div class="select-decor__img-wrap">
+               <picture>
+                 <source type="image/webp" media="(min-width: 1366px)" srcset="img/Оформление-ягодное--lg.webp">
+                 <source type="image/webp" media="(min-width: 768px)" srcset="img/Оформление-ягодное--md.webp">
+                 <source type="image/webp" srcset="img/Оформление-ягодное--sm@1x.webp 1x, img/Оформление-ягодное--sm@2x.webp 2x">
+
+                 <source media="(min-width: 1366px)" srcset="img/Оформление-ягодное--lg.jpg">
+                 <source media="(min-width: 768px)" srcset="img/Оформление-ягодное--md.jpg">
+
+                 <img class="select-decor__img" src="img/Оформление-ягодное--sm@1x.jpg" srcset="img/Оформление-маршмэллоу--sm@2x.jpg 2x" alt="Оформление маршмэллоу">
+               </picture>
+             </div>
+
+             <p class="select-decor__title">
+               <i>Ягодное ассорти</i>
+             </p>
+
+             <p class="select-decor__price">
+               <b>700 руб/кг</b>
+             </p>
+
+           </li>
+
+           <li class="select-decor_item">
+
+             <div class="select-decor__img-wrap">
+               <picture>
+                 <source type="image/webp" media="(min-width: 1366px)" srcset="img/Оформление-маршмэллоу--lg.webp">
+                 <source type="image/webp" media="(min-width: 768px)" srcset="img/Оформление-маршмэллоу--md.webp">
+                 <source type="image/webp" srcset="img/Оформление-маршмэллоу--sm@1x.webp 1x, img/Оформление-маршмэллоу--sm@2x.webp 2x">
+
+                 <source media="(min-width: 1366px)" srcset="img/Оформление-маршмэллоу--lg.jpg">
+                 <source media="(min-width: 768px)" srcset="img/Оформление-маршмэллоу--md.jpg">
+
+                 <img class="select-decor__img" src="img/Оформление-маршмэллоу--sm@1x.jpg" srcset="img/Оформление-маршмэллоу--sm@2x.jpg 2x" alt="Оформление маршмэллоу">
+               </picture>
+             </div>
+
+             <p class="select-decor__title">
+               <i>Маршмеллоу</i>
+             </p>
+
+             <p class="select-decor__price">
+               <b>600 руб/кг</b>
+             </p>
+
+           </li>
+
+           <li class="select-decor_item">
+
+             <div class="select-decor__img-wrap">
+               <picture>
+                 <source type="image/webp" media="(min-width: 1366px)" srcset="img/Оформление-ягодное--lg.webp">
+                 <source type="image/webp" media="(min-width: 768px)" srcset="img/Оформление-ягодное--md.webp">
+                 <source type="image/webp" srcset="img/Оформление-ягодное--sm@1x.webp 1x, img/Оформление-ягодное--sm@2x.webp 2x">
+
+                 <source media="(min-width: 1366px)" srcset="img/Оформление-ягодное--lg.jpg">
+                 <source media="(min-width: 768px)" srcset="img/Оформление-ягодное--md.jpg">
+
+                 <img class="select-decor__img" src="img/Оформление-ягодное--sm@1x.jpg" srcset="img/Оформление-маршмэллоу--sm@2x.jpg 2x" alt="Оформление маршмэллоу">
+               </picture>
+             </div>
+
+             <p class="select-decor__title">
+               <i>Ягодное ассорти</i>
+             </p>
+
+             <p class="select-decor__price">
+               <b>700 руб/кг</b>
+             </p>
+
+           </li>
+
+           <li class="select-decor_item">
+
+             <div class="select-decor__img-wrap">
+               <picture>
+                 <source type="image/webp" media="(min-width: 1366px)" srcset="img/Оформление-маршмэллоу--lg.webp">
+                 <source type="image/webp" media="(min-width: 768px)" srcset="img/Оформление-маршмэллоу--md.webp">
+                 <source type="image/webp" srcset="img/Оформление-маршмэллоу--sm@1x.webp 1x, img/Оформление-маршмэллоу--sm@2x.webp 2x">
+
+                 <source media="(min-width: 1366px)" srcset="img/Оформление-маршмэллоу--lg.jpg">
+                 <source media="(min-width: 768px)" srcset="img/Оформление-маршмэллоу--md.jpg">
+
+                 <img class="select-decor__img" src="img/Оформление-маршмэллоу--sm@1x.jpg" srcset="img/Оформление-маршмэллоу--sm@2x.jpg 2x" alt="Оформление маршмэллоу">
+               </picture>
+             </div>
+
+             <p class="select-decor__title">
+               <i>Маршмеллоу</i>
+             </p>
+
+             <p class="select-decor__price">
+               <b>600 руб/кг</b>
+             </p>
+
+           </li>
+
+           <li class="select-decor_item">
+
+             <div class="select-decor__img-wrap">
+               <picture>
+                 <source type="image/webp" media="(min-width: 1366px)" srcset="img/Оформление-ягодное--lg.webp">
+                 <source type="image/webp" media="(min-width: 768px)" srcset="img/Оформление-ягодное--md.webp">
+                 <source type="image/webp" srcset="img/Оформление-ягодное--sm@1x.webp 1x, img/Оформление-ягодное--sm@2x.webp 2x">
+
+                 <source media="(min-width: 1366px)" srcset="img/Оформление-ягодное--lg.jpg">
+                 <source media="(min-width: 768px)" srcset="img/Оформление-ягодное--md.jpg">
+
+                 <img class="select-decor__img" src="img/Оформление-ягодное--sm@1x.jpg" srcset="img/Оформление-маршмэллоу--sm@2x.jpg 2x" alt="Оформление маршмэллоу">
+               </picture>
+             </div>
+
+             <p class="select-decor__title">
+               <i>Ягодное ассорти</i>
+             </p>
+
+             <p class="select-decor__price">
+               <b>700 руб/кг</b>
+             </p>
+
+           </li>
+
+           <li class="select-decor_item">
+
+             <div class="select-decor__img-wrap">
+               <picture>
+                 <source type="image/webp" media="(min-width: 1366px)" srcset="img/Оформление-маршмэллоу--lg.webp">
+                 <source type="image/webp" media="(min-width: 768px)" srcset="img/Оформление-маршмэллоу--md.webp">
+                 <source type="image/webp" srcset="img/Оформление-маршмэллоу--sm@1x.webp 1x, img/Оформление-маршмэллоу--sm@2x.webp 2x">
+
+                 <source media="(min-width: 1366px)" srcset="img/Оформление-маршмэллоу--lg.jpg">
+                 <source media="(min-width: 768px)" srcset="img/Оформление-маршмэллоу--md.jpg">
+
+                 <img class="select-decor__img" src="img/Оформление-маршмэллоу--sm@1x.jpg" srcset="img/Оформление-маршмэллоу--sm@2x.jpg 2x" alt="Оформление маршмэллоу">
+               </picture>
+             </div>
+
+             <p class="select-decor__title">
+               <i>Маршмеллоу</i>
+             </p>
+
+             <p class="select-decor__price">
+               <b>600 руб/кг</b>
+             </p>
+
+           </li>
+
+           <li class="select-decor_item">
+
+             <div class="select-decor__img-wrap">
+               <picture>
+                 <source type="image/webp" media="(min-width: 1366px)" srcset="img/Оформление-ягодное--lg.webp">
+                 <source type="image/webp" media="(min-width: 768px)" srcset="img/Оформление-ягодное--md.webp">
+                 <source type="image/webp" srcset="img/Оформление-ягодное--sm@1x.webp 1x, img/Оформление-ягодное--sm@2x.webp 2x">
+
+                 <source media="(min-width: 1366px)" srcset="img/Оформление-ягодное--lg.jpg">
+                 <source media="(min-width: 768px)" srcset="img/Оформление-ягодное--md.jpg">
+
+                 <img class="select-decor__img" src="img/Оформление-ягодное--sm@1x.jpg" srcset="img/Оформление-маршмэллоу--sm@2x.jpg 2x" alt="Оформление маршмэллоу">
+               </picture>
+             </div>
+
+             <p class="select-decor__title">
+               <i>Ягодное ассорти</i>
+             </p>
+
+             <p class="select-decor__price">
+               <b>700 руб/кг</b>
+             </p>
+
+           </li>
+
+           <li class="select-decor_item">
+
+             <div class="select-decor__img-wrap">
+               <picture>
+                 <source type="image/webp" media="(min-width: 1366px)" srcset="img/Оформление-маршмэллоу--lg.webp">
+                 <source type="image/webp" media="(min-width: 768px)" srcset="img/Оформление-маршмэллоу--md.webp">
+                 <source type="image/webp" srcset="img/Оформление-маршмэллоу--sm@1x.webp 1x, img/Оформление-маршмэллоу--sm@2x.webp 2x">
+
+                 <source media="(min-width: 1366px)" srcset="img/Оформление-маршмэллоу--lg.jpg">
+                 <source media="(min-width: 768px)" srcset="img/Оформление-маршмэллоу--md.jpg">
+
+                 <img class="select-decor__img" src="img/Оформление-маршмэллоу--sm@1x.jpg" srcset="img/Оформление-маршмэллоу--sm@2x.jpg 2x" alt="Оформление маршмэллоу">
+               </picture>
+             </div>
+
+             <p class="select-decor__title">
+               <i>Маршмеллоу</i>
+             </p>
+
+             <p class="select-decor__price">
+               <b>600 руб/кг</b>
+             </p>
+
+           </li>
+
+           <li class="select-decor_item">
+
+             <div class="select-decor__img-wrap">
+               <picture>
+                 <source type="image/webp" media="(min-width: 1366px)" srcset="img/Оформление-ягодное--lg.webp">
+                 <source type="image/webp" media="(min-width: 768px)" srcset="img/Оформление-ягодное--md.webp">
+                 <source type="image/webp" srcset="img/Оформление-ягодное--sm@1x.webp 1x, img/Оформление-ягодное--sm@2x.webp 2x">
+
+                 <source media="(min-width: 1366px)" srcset="img/Оформление-ягодное--lg.jpg">
+                 <source media="(min-width: 768px)" srcset="img/Оформление-ягодное--md.jpg">
+
+                 <img class="select-decor__img" src="img/Оформление-ягодное--sm@1x.jpg" srcset="img/Оформление-маршмэллоу--sm@2x.jpg 2x" alt="Оформление маршмэллоу">
+               </picture>
+             </div>
+
+             <p class="select-decor__title">
+               <i>Ягодное ассорти</i>
+             </p>
+
+             <p class="select-decor__price">
+               <b>700 руб/кг</b>
+             </p>
+
+           </li>
+
+           <li class="select-decor_item">
+
+             <div class="select-decor__img-wrap">
+               <picture>
+                 <source type="image/webp" media="(min-width: 1366px)" srcset="img/Оформление-маршмэллоу--lg.webp">
+                 <source type="image/webp" media="(min-width: 768px)" srcset="img/Оформление-маршмэллоу--md.webp">
+                 <source type="image/webp" srcset="img/Оформление-маршмэллоу--sm@1x.webp 1x, img/Оформление-маршмэллоу--sm@2x.webp 2x">
+
+                 <source media="(min-width: 1366px)" srcset="img/Оформление-маршмэллоу--lg.jpg">
+                 <source media="(min-width: 768px)" srcset="img/Оформление-маршмэллоу--md.jpg">
+
+                 <img class="select-decor__img" src="img/Оформление-маршмэллоу--sm@1x.jpg" srcset="img/Оформление-маршмэллоу--sm@2x.jpg 2x" alt="Оформление маршмэллоу">
+               </picture>
+             </div>
+
+             <p class="select-decor__title">
+               <i>Маршмеллоу</i>
+             </p>
+
+             <p class="select-decor__price">
+               <b>600 руб/кг</b>
+             </p>
+
+           </li>
+
+           <li class="select-decor_item">
+
+             <div class="select-decor__img-wrap">
+               <picture>
+                 <source type="image/webp" media="(min-width: 1366px)" srcset="img/Оформление-ягодное--lg.webp">
+                 <source type="image/webp" media="(min-width: 768px)" srcset="img/Оформление-ягодное--md.webp">
+                 <source type="image/webp" srcset="img/Оформление-ягодное--sm@1x.webp 1x, img/Оформление-ягодное--sm@2x.webp 2x">
+
+                 <source media="(min-width: 1366px)" srcset="img/Оформление-ягодное--lg.jpg">
+                 <source media="(min-width: 768px)" srcset="img/Оформление-ягодное--md.jpg">
+
+                 <img class="select-decor__img" src="img/Оформление-ягодное--sm@1x.jpg" srcset="img/Оформление-маршмэллоу--sm@2x.jpg 2x" alt="Оформление маршмэллоу">
+               </picture>
+             </div>
+
+             <p class="select-decor__title">
+               <i>Ягодное ассорти</i>
+             </p>
+
+             <p class="select-decor__price">
+               <b>700 руб/кг</b>
+             </p>
+
+           </li>
+
+         </ol>
+
+         <div class="select-decor__slider-number"></div>
+
+         <div class="form-orders__slider-indicator form-orders__slider-indicator--decor slider-indicator">
+           <span class="select-indicator select-indicator--current"></span>
+           <span class="select-indicator"></span>
+           <span class="select-indicator"></span>
+           <span class="select-indicator"></span>
+           <span class="select-indicator select-indicator--more"></span>
+         </div>
+
+         <div class="form-orders__slider-control slider-control" hidden>
+           <button class="slider-control slider-control--prev" type="button">
+             <span class="visually-hidden">Предыдущий слайд</span>
+             <svg role="presentation" aria-hidden="true" width="16" height="16" focusable="false">
+               <use xlink:href="#icon-arrow"></use>
+             </svg>
+           </button>
+           <button class="slider-control slider-control--next" type="button">
+             <span class="visually-hidden">Следующий слайд</span>
+             <svg role="presentation" aria-hidden="true" width="16" height="16" focusable="false">
+               <use xlink:href="#icon-arrow"></use>
+             </svg>
+           </button>
+         </div>
+        </div>
+
+        <fieldset class="form-orders__general general-orders">
+
+          <legend class="general-orders__title">
+            Ваш выбор
+          </legend>
+
+          <p class="general-orders__input-wrap">
+
+            <label class="general-orders__label" for="stuffing">
+              Начинка
+            </label>
+
+            <select name="stuffing" id="stuffing" class="general-orders__select">
+
+              <option value="Шоколадный ганаш" selected>Шоколадный ганаш - 1000 руб/кг</option>
+              <option value="Клубничный ганаш">Клубничный ганаш - 800 руб/кг</option>
+              <option value="Огуречный ганаш">Огуречный ганаш - 500 руб/кг</option>
+              <option value="Вишневый ганаш">Вишневый ганаш - 850 руб/кг</option>
+              <option value="Аппельсиновый ганаш">Аппельсиновый ганаш - 900 руб/кг</option>
+              <option value="Зефирный ганаш">Зефирный ганаш - 750 руб/кг</option>
+              <option value="Цитрусовый ганаш">Цитрусовый ганаш - 875 руб/кг</option>
+              <option value="Мармеладный ганаш">Мармеладный ганаш - 999 руб/кг</option>
+              <option value="Яблочный ганаш">Яблочный ганаш - 450 руб/кг</option>
+              <option value="Смородиновый ганаш">Смородиновый ганаш - 680 руб/кг</option>
+              <option value="Смородиновый ганаш">Ореховый ганаш - 1150 руб/кг</option>
+              <option value="Смородиновый ганаш">Грушевый ганаш - 600 руб/кг</option>
+
+            </select>
+
+          </p>
+
+          <p class="general-orders__input-wrap">
+
+            <label class="general-orders__label" for="size">
+              Размер
+            </label>
+
+            <select name="size" id="size" class="general-orders__select">
+
+              <option value="1 кг" selected>1 кг (один ярус, 6 персон)</option>
+              <option value="2 кг">2 кг (один ярус, 10 - 12 персон)</option>
+              <option value="5 кг">5 кг (два яруса, 15 - 20 персон)</option>
+              <option value="8 кг">8 кг (три яруса, 25 - 30 персон)</option>
+
+            </select>
+
+          </p>
+
+          <p class="general-orders__input-wrap">
+
+            <label class="general-orders__label" for="decor">
+              Оформление
+            </label>
+
+            <select name="decor" id="decor" class="general-orders__select">
+
+              <option value="Маршмеллоу" selected>Маршмеллоу - 600 руб/кг</option>
+              <option value="Ягодное ассорти">Ягодное ассорти - 700 руб/кг</option>
+              <option value="Маршмеллоу">Маршмеллоу - 600 руб/кг</option>
+              <option value="Ягодное ассорти">Ягодное ассорти - 700 руб/кг</option>
+              <option value="Маршмеллоу">Маршмеллоу - 600 руб/кг</option>
+              <option value="Ягодное ассорти">Ягодное ассорти - 700 руб/кг</option>
+              <option value="Маршмеллоу">Маршмеллоу - 600 руб/кг</option>
+              <option value="Ягодное ассорти">Ягодное ассорти - 700 руб/кг</option>
+              <option value="Маршмеллоу">Маршмеллоу - 600 руб/кг</option>
+              <option value="Ягодное ассорти">Ягодное ассорти - 700 руб/кг</option>
+              <option value="Маршмеллоу">Маршмеллоу - 600 руб/кг</option>
+              <option value="Ягодное ассорти">Ягодное ассорти - 700 руб/кг</option>
+              <option value="Маршмеллоу">Маршмеллоу - 600 руб/кг</option>
+              <option value="Ягодное ассорти">Ягодное ассорти - 700 руб/кг</option>
+              <option value="Маршмеллоу">Маршмеллоу - 600 руб/кг</option>
+              <option value="Ягодное ассорти">Ягодное ассорти - 700 руб/кг</option>
+
+            </select>
+
+          </p>
+
+          <button class="general-orders__submit-btn btn" type="submit">Заказать торт</button>
+
+        </fieldset>
+
+      </div>
 
     </form>
 
