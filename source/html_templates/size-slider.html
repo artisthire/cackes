@@ -1,0 +1,30 @@
+<div class="form-orders__select-slider size-slider">
+
+  <ol class="size-slider__list">
+
+    @@for (var i = 0; i < weight.length; i++) {
+    <li class="size-slider__item">
+
+      <figure class="size-slider__img-wrap">
+        <figcaption>`+weight[i]+`</figcaption>
+        <img src="img/`+img_name[i]+`" alt="`+img_alt[i]+`" width="`+width[i]+`" height="`+height[i]+`">
+      </figure>
+
+      <p class="size-slider__desc">
+        `+descr[i]+`
+      </p>
+
+      <button class="size-slider__btn btn" type="button">Выбрать</button>
+
+    </li>
+    }
+  </ol>
+
+  <div class="size-slider__slider-indicator slider-indicator">
+    <span class="select-indicator select-indicator--current"></span>
+    <span class="select-indicator"></span>
+    <span class="select-indicator"></span>
+    <span class="select-indicator"></span>
+  </div>
+
+</div>

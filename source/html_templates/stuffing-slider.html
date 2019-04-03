@@ -1,0 +1,65 @@
+<div class="form-orders__select-slider stuffing-slider">
+
+  <ul class="stuffing-slider__list">
+
+    @@for (var i = 0; i < title.length; i++) {
+    <li class="stuffing-slider__item">
+
+      <p class="stuffing-slider__slider-number">`+(i+1)+`/`+title.length+`</p>
+
+      <div class="stuffing-slider__img-wrap">
+        <picture>
+          <source type="image/webp" media="(min-width: 1366px)" srcset="img/`+img_name[i]+`--lg.webp">
+          <source type="image/webp" media="(min-width: 768px)" srcset="img/`+img_name[i]+`--md.webp">
+          <source type="image/webp" srcset="img/`+img_name[i]+`--sm@1x.webp 1x, img/`+img_name[i]+`--sm@2x.webp 2x">
+
+          <source media="(min-width: 1366px)" srcset="img/`+img_name[i]+`--lg.png">
+          <source media="(min-width: 768px)" srcset="img/`+img_name[i]+`--md.png">
+
+          <img class="stuffing-slider__img" src="img/`+img_name[i]+`--sm@1x.png" srcset="img/`+img_name[i]+`--sm@2x.png 2x" alt="`+title[i]+`">
+        </picture>
+      </div>
+
+      <p class="stuffing-slider__title">
+        <i>`+title[i]+`</i>
+      </p>
+
+      <p class="stuffing-slider__desc">
+        Ароматный шоколадный бисквит, густой шоколадный крем – самый шоколадный из всех возможных десертов!
+      </p>
+
+      <p class="stuffing-slider__price">
+        <b>`+price[i]+` руб/кг</b>
+      </p>
+
+      <button class="stuffing-slider__btn btn" type="button">Выбрать</button>
+
+    </li>
+    }
+
+  </ul>
+
+  <div class="stuffing-slider__slider-indicator slider-indicator">
+    <span class="select-indicator select-indicator--current"></span>
+    <span class="select-indicator"></span>
+    <span class="select-indicator"></span>
+    <span class="select-indicator"></span>
+    <span class="select-indicator select-indicator--more"></span>
+  </div>
+
+  <div class="stuffing-slider__slider-control slider-control">
+    <button class="slider-control slider-control--prev" type="button">
+      <span class="visually-hidden">Предыдущий слайд</span>
+      <svg role="presentation" aria-hidden="true" width="16" height="16" focusable="false">
+        <use xlink:href="#icon-arrow"></use>
+      </svg>
+    </button>
+    <button class="slider-control slider-control--next" type="button">
+      <span class="visually-hidden">Следующий слайд</span>
+      <svg role="presentation" aria-hidden="true" width="16" height="16" focusable="false">
+        <use xlink:href="#icon-arrow"></use>
+      </svg>
+    </button>
+  </div>
+
+</div>
