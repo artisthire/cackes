@@ -1,0 +1,55 @@
+<div class="market-reviews__slider reviews-slider">
+
+  <ul class="reviews-slider__list">
+
+    @@for (var i = 0; i < user_name.length; i++) {
+    <li class="reviews-slider__item"
+      @@if(`+i+` > 2) {hidden}
+    >
+
+      <p class="reviews-slider__slider-number">`+(i+1)+`/`+user_name.length+`</p>
+
+      <figure class="reviews-slider__img-wrap">
+        <img src="img/`+img_name[i]+`.jpg" alt="Фото пользователя" class="reviews-slider__user-pic" width="110" height="110" />
+        <figcaption class="reviews-slider__user-info">
+          <b class="reviews-slider__user-name">`+user_name[i]+`</b>
+          `+user_detail[i]+`
+        </figcaption>
+      </figure>
+
+      <blockquote class="reviews-slider__user-review reviews-slider__user-review--short">
+        Заказывала торт брауни на юбилей мужа. Гости были в восторге! Отдельное спасибо за своевременную доставку! Теперь будем заказывать торты только у вас для наших семейных праздников:)
+        Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Осталось первую семь его ведущими текст, запятой всемогущая, океана над они по всей жаренные скатился семантика дал курсивных lorem правилами но!
+        Далеко-далеко за словесными горами в стране, гласных.
+      </blockquote>
+
+      <button class="reviews-slider__btn-more btn" type="button">Развернуть</button>
+
+    </li>
+    }
+  </ul>
+
+  <div class="reviews-slider__slider-indicator slider-indicator">
+    <span class="select-indicator select-indicator--current"></span>
+    <span class="select-indicator"></span>
+    <span class="select-indicator"></span>
+    <span class="select-indicator"></span>
+    <span class="select-indicator select-indicator--more"></span>
+  </div>
+
+  <div class="reviews-slider__slider-control slider-control">
+    <button class="slider-control slider-control--prev" type="button">
+      <span class="visually-hidden">Предыдущий слайд</span>
+      <svg role="presentation" aria-hidden="true" width="16" height="16" focusable="false">
+        <use xlink:href="#icon-arrow"></use>
+      </svg>
+    </button>
+    <button class="slider-control slider-control--next" type="button">
+      <span class="visually-hidden">Следующий слайд</span>
+      <svg role="presentation" aria-hidden="true" width="16" height="16" focusable="false">
+        <use xlink:href="#icon-arrow"></use>
+      </svg>
+    </button>
+  </div>
+
+</div>
