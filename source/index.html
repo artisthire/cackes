@@ -295,11 +295,269 @@
     @@include("html_templates/reviews-slider.html", {
       "user_name": ["Мария", "Таня", "Оля", "Юля", "Света", "Анна", "Люда", "Надя"],
       "img_name": ["avatar-1", "avatar-1", "avatar-1", "avatar-1", "avatar-1", "avatar-1", "avatar-1", "avatar-1"],
-      "user_detail": ["юрист, 33 года", "инженер, 35 год", "менеджер, 22 года", "бухгалтер, 50 год", "пенсионер, 63 года", "домохозяйка, 25 год", "продавец, 28 год", "студентка, 19 год"]
+      "user_detail": ["юрист, 33 года", "инженер, 35 год", "менеджер, 22 года", "бухгалтер, 50 год", "пенсионер, 63 года", "домохозяйка, 25 год", "продавец, 28 год", "студентка, 19 год"],
+      "hidden": ["", "", "", "hidden", "hidden", "hidden", "hidden", "hidden"]
     })
 
   </section>
 
+
+  <section class="about-us">
+
+    <h3 class="about-us__title">О нас</h3>
+
+    <div class="about-us__desc about-person">
+
+      <picture class="about-person__user-pic">
+        <source type="image/webp" media="(min-width: 1366px)" srcset="img/Фото-кондитер--lg.webp">
+        <source type="image/webp" media="(min-width: 768px)" srcset="img/Фото-кондитер--md.webp">
+        <source type="image/webp" srcset="img/Фото-кондитер--sm@1x.webp 1x, img/Фото-кондитер--sm@2x.webp 2x">
+
+        <source media="(min-width: 1366px)" srcset="img/Фото-кондитер--lg.jpg">
+        <source media="(min-width: 768px)" srcset="img/Фото-кондитер--md.jpg">
+
+        <img src="img/Фото-кондитер--sm@1x.jpg" srcset="img/Фото-кондитер--sm@2x.jpg 2x" alt="Фото кондитера" width="155" height="155" >
+      </picture>
+
+      <h4>О кондитере</h4>
+
+      <details>
+        <summary>Кондитер – как призвание</summary>
+        <p>
+          Павел — профессиональный повар в
+          различных гастрономических областях, но однажды его сердце покорило кондитерское искусство.<br>
+          С ранних лет он увлекался утонченным мастерством и обратился к своим талантам
+          как кондитер.
+        </p>
+      </details>
+
+      <details>
+        <summary>Принцип – натуральные ингредиенты</summary>
+        <p>
+          Сегодня Павел радует изделиями не только близких, но и тех, кто предпочитает качественную продукцию для торжества, <br> а главным принципом является выбор натуральных ингредиентов.
+        </p>
+      </details>
+
+      <ul class="about-person__social">
+
+        <li class="about-person__social-link">
+
+          <a href="#insta">
+            <span class="visually-hidden">Кондитер в Инстаграмме</span>
+            <svg role="presentation" aria-hidden="true" width="18" height="18" focusable="false">
+              <use xlink:href="#icon-insta"></use>
+            </svg>
+          </a>
+
+        </li>
+
+        <li class="about-person__social-link">
+
+          <a href="#vk">
+            <span class="visually-hidden">Кондитер в Вконтакте</span>
+            <svg role="presentation" aria-hidden="true" width="25" height="17" focusable="false">
+              <use xlink:href="#icon-vk"></use>
+            </svg>
+          </a>
+
+        </li>
+
+        <li class="about-person__social-link">
+
+          <a href="#tw">
+            <span class="visually-hidden">Кондитер в Твиттере</span>
+            <svg role="presentation" aria-hidden="true" width="19" height="16" focusable="false">
+              <use xlink:href="#icon-tw"></use>
+            </svg>
+          </a>
+
+        </li>
+
+      </ul>
+
+      <blockquote>
+        Я за простые рецепты. В Италии это называют cucina povera: когда обычные ингредиенты превращаются в божественное блюдо.
+
+        <picture class="about-person__user-sign">
+          <source type="image/webp" media="(min-width: 1366px)" srcset="img/роспись--lg.webp">
+          <source type="image/webp" media="(min-width: 768px)" srcset="img/роспись--md.webp">
+          <source type="image/webp" srcset="img/роспись--sm@1x.webp 1x, img/роспись--sm@2x.webp 2x">
+
+          <source media="(min-width: 1366px)" srcset="img/роспись--lg.jpg">
+          <source media="(min-width: 768px)" srcset="img/роспись--md.jpg">
+
+          <img src="img/роспись--sm@1x.png" srcset="img/роспись--sm@2x.png 2x" alt="Подпись" width="64" height="31">
+        </picture>
+      </blockquote>
+
+    </div>
+
+  </section>
+
+  <section class="features">
+
+    <h3 class="features__title">Наши преимущества</h3>
+
+    <p class="features__subtitle">Почему нас выбирают ?</p>
+
+    <div class="features__list">
+
+      <ul>
+        <li>
+
+          <h4>Без искусственных добавок</h4>
+
+          <p>Работаем  с натуральными ингредиентами и свежими продуктами</p>
+
+        </li>
+        <li>
+
+          <h4>Свежий торт в день торжества</h4>
+
+          <p>Торты изготавливаются в течение суток до отправки</p>
+
+        </li>
+      </ul>
+
+    </div>
+
+    <div class="feature__list">
+
+      <h4 class="features__title">Забота о клиентах</h4>
+
+      <p class="features__subtitle">Для нас важно</p>
+
+      <ul>
+
+        <li>
+          Нам важно чтобы каждый торт был безупречным, как внутри, так и снаружи, чтобы он был создан исключительно для вас и для вашего события.
+        </li>
+
+      </ul>
+
+    </div>
+
+  </section>
+
+  <section class="about-order">
+
+    <h3 class="about-order__title">Как заказать</h3>
+
+    <ol class="about-order__list">
+
+      <li class="about-order__item">
+        <h4>Срок заказа</h4>
+        <p>Размещать заказы желательно за 2-3&nbsp;дня. На выходные заказы лучше размещать минимум за неделю. </p>
+      </li>
+
+      <li class="about-order__item">
+        <h4>Доставка по городу</h4>
+        <p>Доставка в пределах города 200 рубей, при заказе на сумму более 2000 доставка бесплатно.</p>
+      </li>
+
+      <li class="about-order__item">
+        <h4>Доставка за городом</h4>
+        <p>Доставка за пределами города рассчитывается индивидуально.</p>
+      </li>
+
+    </ol>
+
+  </section>
+
+  <section class="main-contacts">
+
+    <h3 class="main-contacts__title">Контакты</h3>
+
+    <p class="main-contacts__subtitle">Остались вопросы</p>
+
+    <form action="https://echo.htmlacademy.ru/" method="post" class="main-contacts__inner feedback-form">
+
+      <fieldset class="feedback-form__inner">
+
+        <legend class="feedback-form__title">
+          Заполните форму ниже и наш кондитер свяжется с Вами
+        </legend>
+
+        <p class="feedback-form__input-wrap">
+
+          <label for="user-name" class="visually-hidden">Ваше имя</label>
+
+          <input class="feedback-form__input" id="user-name" name="user-name" type="text" placeholder="Ваше имя" required/>
+
+        </p>
+
+        <p class="feedback-form__input-wrap">
+
+          <label for="user-email" class="visually-hidden">Email адрес</label>
+
+          <input class="feedback-form__input" id="user-email" name="user-email" type="email" placeholder="Email адрес" required />
+
+        </p>
+
+        <p class="feedback-form__input-wrap">
+
+          <label for="user-message" class="visually-hidden">Ваш вопрос</label>
+
+          <textarea class="feedback-form__textarea" id="user-message" name="user-message" cols="30" rows="10" placeholder="Ваш вопрос" ></textarea>
+
+        </p>
+
+        <button class="feedback-form__btn-submit btn" type="submit">Отправить</button>
+
+      </fieldset>
+
+    </form>
+
+    <div class="main-contacts__inner">
+
+      <ul class="main-contacts__list">
+
+        <li class="main-contacts__item">
+          Или позвоните по телефону: <br>
+          <a class="main-contacts__link" href="tel:+79068999296">+7 906 899 92 96</a>
+        </li>
+
+        <li class="main-contacts__item">
+          Наша почта:
+          <a class="main-contacts__link" href="mailto:bakerybypavel@mail.ru">bakerybypavel@mail.ru</a>
+        </li>
+
+        <li class="main-contacts__item">
+          Мы в соц. сетях:
+
+          <ul class="main-contacts__social-list">
+
+            <li class="main-contacts__social-link">
+
+              <a href="#we_in_insta">
+                <span class="visually-hidden">Мы в Инстаграмме</span>
+                <svg role="presentation" aria-hidden="true" width="32" height="32" focusable="false">
+                  <use xlink:href="#icon-insta"></use>
+                </svg>
+              </a>
+
+            </li>
+
+            <li class="about-person__social-link">
+
+              <a href="#we_in_vk">
+                <span class="visually-hidden">Мы в Вконтакте</span>
+                <svg role="presentation" aria-hidden="true" width="42" height="26" focusable="false">
+                  <use xlink:href="#icon-vk"></use>
+                </svg>
+              </a>
+
+            </li>
+
+          </ul>
+
+        </li>
+
+      </ul>
+
+    </div>
+
+  </section>
 
   </main>
 

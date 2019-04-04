@@ -3,16 +3,14 @@
   <ul class="reviews-slider__list">
 
     @@for (var i = 0; i < user_name.length; i++) {
-    <li class="reviews-slider__item"
-      @@if(`+i+` > 2) {hidden}
-    >
+    <li class="reviews-slider__item" `+hidden[i]+`>
 
       <p class="reviews-slider__slider-number">`+(i+1)+`/`+user_name.length+`</p>
 
-      <figure class="reviews-slider__img-wrap">
-        <img src="img/`+img_name[i]+`.jpg" alt="Фото пользователя" class="reviews-slider__user-pic" width="110" height="110" />
+      <figure class="reviews-slider__user-pic">
+        <img src="img/`+img_name[i]+`.jpg" alt="Фото пользователя" width="110" height="110" />
         <figcaption class="reviews-slider__user-info">
-          <b class="reviews-slider__user-name">`+user_name[i]+`</b>
+          <b>`+user_name[i]+`</b>
           `+user_detail[i]+`
         </figcaption>
       </figure>
