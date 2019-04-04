@@ -5,7 +5,7 @@
     @@for (var i = 0; i < user_name.length; i++) {
     <li class="reviews-slider__item" `+hidden[i]+`>
 
-      <p class="reviews-slider__slider-number">`+(i+1)+`/`+user_name.length+`</p>
+      <p class="reviews-slider__slider-number" hidden>`+(i+1)+`/`+user_name.length+`</p>
 
       <figure class="reviews-slider__user-pic">
         <img src="img/`+img_name[i]+`.jpg" alt="Фото пользователя" width="110" height="110" />
@@ -21,7 +21,7 @@
         Далеко-далеко за словесными горами в стране, гласных.
       </blockquote>
 
-      <button class="reviews-slider__btn-more btn" type="button">Развернуть</button>
+      <button class="reviews-slider__btn-more btn" type="button" hidden>Развернуть</button>
 
     </li>
     }
@@ -35,7 +35,7 @@
     <span class="select-indicator select-indicator--more"></span>
   </div>
 
-  <div class="reviews-slider__slider-control slider-control">
+  <div class="reviews-slider__slider-control slider-control" hidden>
     <button class="slider-control slider-control--prev" type="button">
       <span class="visually-hidden">Предыдущий слайд</span>
       <svg role="presentation" aria-hidden="true" width="16" height="16" focusable="false">
