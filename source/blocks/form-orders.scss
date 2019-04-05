@@ -1,0 +1,33 @@
+.form-orders__step {
+  display: block;
+  background-color: $white;
+}
+
+.form-orders__step-title {
+  font-family: $font-title;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1;
+  color: $order-steps-color;
+
+  @media (min-width: $screen-md) {
+    font-size: 18px;
+  }
+
+  @media (min-width: $screen-lg) {
+    font-size: 27px;
+  }
+}
+
+.form-orders__step-number {
+  font-size: (30em/16);
+
+  @media (min-width: $screen-md) {
+    display: block;
+    font-size: (36em/18);
+  }
+
+  @media (min-width: $screen-lg) {
+    font-size: (58em/27);
+  }
+}
