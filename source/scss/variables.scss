@@ -1,35 +1,38 @@
-$main-fonts:                  'Open Sans', Arial, sans-serif;
+$font-main:                  'Ubuntu', Arial, sans-serif;
+$font-title:                 'Playfair Display', Georgia, serif;
+$font--script:               'Marck Script', 'Comic Sans MS', cursive;
 
-
-$screen-xs:                   0;
 $screen-sm:                   320px;
 $screen-md:                   768px;
-$screen-lg:                   1250px;
+$screen-lg:                   1366px;
 $retina-dpi:                  144dpi;
 $retina-dppx:                 1.5dppx;
 
-$font-size--sm:               15px;
-$font-size--md:               17px;
-$font-size-title--sm:         25px;
-$font-size-title--md:         43px;
+$font-size:                   19px;
+$font-size--lg:               24px;
+$font-size-title:             32px;
+$font-size-title--md:         37px;
 $font-size-title--lg:         53px;
 
-$line-height--sm:             (24/15);
-$line-height--md:             (30/17);
-$line-height-title--sm:       (30/25);
-$line-height-title--md:       (50/43);
-$line-height-title--lg:       (57/53);
+$line-height:                 (24/19);
+$line-height--lg:             (32/19);
+$line-height-title:           (87/32);
+$line-height-title--md:       (45/37);
+$line-height-title--lg:       1;
 
 $black:                      hsl(0, 0%, 0%);
 $white:                      hsl(0, 0%, 100%);
-$color-main:                 #63d1bb;
 
-$text-color:                 #444444;
-$gray-light:                 #ececec;
-$gray-lighten:               #f1f1f1;
+$text-color:                 #2d2829;
+$link-color--hover:          #f50049;
 
-$icon-background:            #d3d2d2;
-$icon-background--active:    $color-main;
+$btn-color:                  #f50049;
+$btn-color--disabled:        #898989;
+$icon-color:                 $btn-color;
+$order-steps-color:          $btn-color;
+$body-bgn-color:             #fbebea;
+$how-order-bgn-color:        #e3353d;
+$menu-bgn-color:             #e7e7e7;
+$footer-bgn-color:           #898989;
 
-$z-index--modal-backdrop:    10;
-$z-index--modal-popup:       15;
+$z-index--menu-popup:        10;

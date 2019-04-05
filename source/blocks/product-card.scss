@@ -1,0 +1,25 @@
+.product-card__link {
+  font-family: $font-main;
+  text-decoration: none;
+  color: inherit;
+}
+
+.product-card__title {
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 400;
+
+  @media (min-width: $screen-lg) {
+    font-size: 24px;
+  }
+}
+
+.product-card__desc {
+  font-size: 12px;
+  font-weight: 400;
+  color: rgba($text-color, 0.7);
+
+  @media (min-width: $screen-lg) {
+    font-size: 20px;
+  }
+}

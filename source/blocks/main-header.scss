@@ -1,0 +1,45 @@
+.main-header {
+  background-color: $white;
+}
+
+.main-header__logo {
+  color: $black;
+  font-family: $font-title;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: (32/16);
+
+  @media (min-width: $screen-md) {
+    font-size: 20px;
+    line-height: (32/20);
+  }
+
+  @media (min-width: $screen-lg) {
+    font-size: 23px;
+    line-height: (32/23);
+    color: $text-color;
+  }
+}
+
+.main-header__info {
+  display: none;
+  vertical-align: middle;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: (40/15);
+  text-decoration: none;
+  color: inherit;
+
+  &:hover,
+  &:focus {
+    color: $link-color--hover;
+  }
+
+  &:active {
+    color: rgba($link-color--hover, 0.7);
+  }
+
+  @media (min-width: $screen-md) {
+    display: inline;
+  }
+}
