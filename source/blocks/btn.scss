@@ -18,6 +18,7 @@
 
   &:hover,
   &:focus {
+    outline: none;
     box-shadow: 0 5px 5px 0 rgba($btn-color, 0.3);
   }
 

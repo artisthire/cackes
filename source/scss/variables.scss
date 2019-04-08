@@ -1,6 +1,6 @@
 $font-main:                  'Ubuntu', Arial, sans-serif;
 $font-title:                 'Playfair Display', Georgia, serif;
-$font--script:               'Marck Script', 'Comic Sans MS', cursive;
+$font-script:               'Marck Script', 'Comic Sans MS', cursive;
 
 $screen-sm:                   320px;
 $screen-md:                   768px;
@@ -8,11 +8,11 @@ $screen-lg:                   1366px;
 $retina-dpi:                  144dpi;
 $retina-dppx:                 1.5dppx;
 
-$font-size:                   19px;
-$font-size--lg:               24px;
+$font-size:                   14px;
+$font-size--lg:               20px;
 
-$line-height:                 (24/19);
-$line-height--lg:             (32/19);
+$line-height:                 (24/14);
+$line-height--lg:             (24/20);
 
 $black:                      hsl(0, 0%, 0%);
 $white:                      hsl(0, 0%, 100%);
@@ -28,5 +28,6 @@ $body-bgn-color:             #fbebea;
 $how-order-bgn-color:        #e3353d;
 $menu-bgn-color:             #e7e7e7;
 $footer-bgn-color:           #898989;
+$footer-bgn-color--lg:       #e8e8e8;
 
 $z-index--menu-popup:        10;

@@ -1,0 +1,21 @@
+.size-slider {
+  font-size: 14px;
+  font-weight: 400;
+  color: #2f2f2f;
+
+  @media (min-width: $screen-md) {
+    font-size: 12px;
+  }
+
+  @media (min-width: $screen-lg) {
+    font-size: 18px;
+  }
+}
+
+.size-slider__img-title {
+  font-size: 12px;
+
+  @media (min-width: $screen-lg) {
+    font-size: 17px;
+  }
+}

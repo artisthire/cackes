@@ -1,0 +1,56 @@
+.features {
+  font-size: 14px;
+  line-height: 1.2;
+  color: $black;
+
+  @media (min-width: $screen-lg) {
+    font-size: 20px;
+  }
+}
+
+.features__title {
+  font-family: $font-title;
+  font-size: 24px;
+  font-weight: 700;
+  color: $text-color;
+
+  @media (min-width: $screen-md) {
+    font-size: 28px;
+  }
+
+  @media (min-width: $screen-lg) {
+    font-size: 40px;
+  }
+}
+
+.features__subtitle {
+  font-family: $font-script;
+  font-size: 22px;
+  font-weight: 400;
+  color: #32313d;
+
+  @media (min-width: $screen-md) {
+    font-size: 26px;
+  }
+
+  @media (min-width: $screen-lg) {
+    font-size: 35px;
+  }
+}
+
+.features__list {
+
+  & > h4 {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.69;
+
+    @media (min-width: $screen-md) {
+      font-size: 15px;
+    }
+
+    @media (min-width: $screen-lg) {
+      font-size: 20px;
+    }
+  }
+}

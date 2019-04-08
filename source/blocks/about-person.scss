@@ -1,0 +1,46 @@
+.about-person {
+  font-size: 14px;
+
+  @media (min-width: $screen-lg) {
+    font-size: 18px;
+  }
+
+  & > h4 {
+    font-family: $font-script;
+    font-size: 22px;
+    font-weight: 400;
+
+    @media (min-width: $screen-md) {
+      font-size: 26px;
+    }
+
+    @media (min-width: $screen-lg) {
+      font-size: 35px;
+    }
+  }
+
+  & > blockquote {
+    font-family: $font-title;
+    font-size: 13px;
+    font-weight: 700;
+    font-style: italic;
+  }
+}
+
+.about-person__item {
+
+  & > h5 {
+    font-size: 14px;
+    font-weight: 700;
+
+    @media (min-width: $screen-md) {
+      font-size: 15px;
+    }
+
+    @media (min-width: $screen-lg) {
+      font-size: 20px;
+    }
+  }
+}
+
+

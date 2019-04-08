@@ -1,0 +1,45 @@
+.decor-slider {
+  font-size: 14px;
+  line-height: 1;
+  text-align: center;
+  color: #2f2f2f;
+
+  @media (min-width: $screen-lg) {
+    font-size: 20px;
+  }
+}
+
+.decor-slider__slider-number {
+  font-size: 12px;
+  line-height: 1.25;
+
+  @media (min-width: $screen-lg) {
+    font-size: 18px;
+    line-height: 1.39;
+  }
+}
+
+.decor-slider__title {
+  font-style: normal;
+}
+
+.decor-slider__price {
+  font-family: $font-title;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1;
+
+  & > * {
+    font: inherit;
+  }
+
+  @media (min-width: $screen-md) {
+    font-size: 14px;
+    line-height: 1.29;
+  }
+
+  @media (min-width: $screen-lg) {
+    font-size: 22px;
+    line-height: 1.36;
+  }
+}

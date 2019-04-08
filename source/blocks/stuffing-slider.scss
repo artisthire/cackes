@@ -1,0 +1,69 @@
+.stuffing-slider {
+  font-size: 14px;
+  line-height: 1.33;
+  color: #2f2f2f;
+
+  @media (min-width: $screen-lg) {
+    font-size: 18px;
+    line-height: 1.33;
+  }
+}
+
+.stuffing-slider__slider-number {
+  font-size: 12px;
+  color: $white;
+
+  @media (min-width: $screen-md) {
+    font-size: 11px;
+    color: inherit;
+  }
+
+  @media (min-width: $screen-lg) {
+    font-size: 18px;
+  }
+}
+
+.stuffing-slider__title {
+  font-size: 16px;
+  font-weight: 700;
+  font-style: normal;
+
+  @media (min-width: $screen-md) {
+    font-size: 18px;
+  }
+
+  @media (min-width: $screen-lg) {
+    font-size: 20px;
+  }
+}
+
+.stuffing-slider__price {
+  font-family: $font-title;
+  font-size: 18px;
+  font-weight: 700;
+  text-align: center;
+
+  & > * {
+    font: inherit;
+  }
+
+  @media (min-width: $screen-md) {
+    font-size: 20px;
+    text-align: left;
+  }
+
+  @media (min-width: $screen-lg) {
+    font-size: 22px;
+  }
+}
+
+.stuffing-slider__btn {
+
+  @media (min-width: $screen-md) {
+    font-size: 10px;
+  }
+
+  @media (min-width: $screen-lg) {
+    font-size: 13px;
+  }
+}

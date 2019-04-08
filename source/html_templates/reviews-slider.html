@@ -5,7 +5,7 @@
     @@for (var i = 0; i < user_name.length; i++) {
     <li class="reviews-slider__item" `+hidden[i]+`>
 
-      <p class="reviews-slider__slider-number" hidden>`+(i+1)+`/`+user_name.length+`</p>
+      <p class="reviews-slider__slider-number">`+(i+1)+`/`+user_name.length+`</p>
 
       <figure class="reviews-slider__user-pic">
         <img src="img/`+img_name[i]+`.jpg" alt="Фото пользователя" width="110" height="110">
@@ -21,7 +21,7 @@
         Далеко-далеко за словесными горами в стране, гласных.
       </blockquote>
 
-      <button class="reviews-slider__btn-more btn" type="button" hidden>Развернуть</button>
+      <button class="reviews-slider__btn-more" type="button">Развернуть</button>
 
     </li>
     }

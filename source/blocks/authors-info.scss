@@ -1,0 +1,10 @@
+.authors-info {
+  font-size: 12px;
+  font-style: normal;
+  line-height: 2.08;
+  color: rgba($white, 0.5);
+
+  @media (min-width: $screen-lg) {
+    color: rgba($black, 0.5);
+  }
+}

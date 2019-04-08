@@ -1,0 +1,37 @@
+.feedback-form__input {
+  font: inherit;
+  font-size: 14px;
+  color: inherit;
+
+  &::placeholder {
+    font: inherit;
+    color: rgba($text-color, 0.2);
+  }
+}
+
+.feedback-form__textarea {
+  font: inherit;
+  font-size: 14px;
+  color: inherit;
+
+  &::placeholder {
+    font: inherit;
+    color: rgba($text-color, 0.2);
+  }
+}
+
+.feedback-form__btn-submit {
+  font-size: 19px;
+  line-height: 1.37;
+  text-transform: none;
+
+  @media (min-width: $screen-md) {
+    font-size: 14px;
+    line-height: 1.57;
+  }
+
+  @media (min-width: $screen-lg) {
+    font-size: 19px;
+    line-height: 1.37;
+  }
+}
