@@ -1,43 +1,48 @@
 <header class="main-header">
 
-  <h1 class="main-header__logo">
-    Cackes
-  </h1>
+  <div class="container main-header__inner">
 
-  <!--DEV Для открытия меню к кнопке нужно добавлять класс menu-toggle-btn--open -->
-  <!--DEV Для закрытия меню к кнопке нужно добавлять класс menu-toggle-btn--close -->
-  <button class="main-header__toggle-btn menu-toggle-btn menu-toggle-btn--open js-menu-toggle-btn" name="toggle-menu" type="button" aria-label="Меню" hidden>
-    <span class="menu-toggle-btn__container">
-      <span class="menu-toggle-btn__line"></span>
-    </span>
-  </button>
+    <h1 class="main-header__logo">
+      Cackes
+    </h1>
 
-  <nav class="site-navigation">
+    <!--DEV Для открытия меню к кнопке нужно добавлять класс menu-toggle-btn--open -->
+    <!--DEV Для закрытия меню к кнопке нужно добавлять класс menu-toggle-btn--close -->
+    <button class="main-header__toggle-btn menu-toggle-btn menu-toggle-btn--open js-menu-toggle-btn" name="toggle-menu" type="button" aria-label="Меню" hidden>
+      <span class="menu-toggle-btn__container">
+        <span class="menu-toggle-btn__line"></span>
+      </span>
+    </button>
 
-    <!--DEV Переключение активного пункта меню выполняется добавлением класса site-navigation__item--current к элементам списка -->
-    <!--DEV Переключение активного пункта подменю выполняется добавлением класса extend-navigation__item--current к элементам списка -->
-    <ul class="site-navigation__list">
-      <li class="site-navigation__item">
-        <a href="#our_cackes">Наши торты</a>
-      </li>
-      <li class="site-navigation__item">
-        <a href="#individual_order">Индивидуальный заказ</a>
-      </li>
-      <li class="site-navigation__item">
-        <a href="#reviews">Отзывы</a>
-      </li>
-      <li class="site-navigation__item">
-        <a href="#about">О нас</a>
-      </li>
-      <li class="site-navigation__item">
-        <a href="#how_order">Как заказать</a>
-      </li>
-      <li class="site-navigation__item">
-        <a href="#contacts">Контакты</a>
-      </li>
-    </ul>
+    <nav class="main-header__site-navigation site-navigation">
 
-  </nav>
+      <!--DEV Переключение активного пункта меню выполняется добавлением класса site-navigation__item--current к элементам списка -->
+      <!--DEV Переключение активного пункта подменю выполняется добавлением класса extend-navigation__item--current к элементам списка -->
+      <ul class="site-navigation__list">
+        <li class="site-navigation__item">
+          <a href="#our_cackes">Наши торты</a>
+        </li>
+        <li class="site-navigation__item">
+          <a href="#individual_order">Индивидуальный заказ</a>
+        </li>
+        <li class="site-navigation__item">
+          <a href="#reviews">Отзывы</a>
+        </li>
+        <li class="site-navigation__item">
+          <a href="#about">О нас</a>
+        </li>
+        <li class="site-navigation__item">
+          <a href="#how_order">Как заказать</a>
+        </li>
+        <li class="site-navigation__item">
+          <a href="#contacts">Контакты</a>
+        </li>
+      </ul>
 
-  <a class="main-header__info" href="tel:+79068999296"><span class="visually-hidden">Наш телефон: </span>+7 906 899 92 96</a>
+    </nav>
+
+    <a class="main-header__info" href="tel:+79068999296"><span class="visually-hidden">Наш телефон: </span>+7 906 899 92 96</a>
+
+  </div>
+
 </header>
