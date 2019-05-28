@@ -49,7 +49,7 @@ var patch = {
     copy_css: '',
     copy_js: 'source/libs/js/*.js',
     svg_sprite_inl: 'source/img/sprite-svg/inline/',
-    svg_sprite_ext: 'source/img/sprite-svg/external/',
+    svg_sprite_ext: '',
     img_sprite: '',
     img_to_bg: 'source/img/inline_img_to_css/',
     svg_inline: 'source/img/inline_svg_to_css/'
@@ -346,7 +346,7 @@ gulp.task('favicon', function() {
   .pipe(browserSync.reload({stream:true}));
 });
 
-gulp.task('sprite:svg_inl', function() {
+gulp.task('sprite:svg_inl', function(done) {
 
   if(patch.src.svg_sprite_inl && patch.src.svg_sprite_inl != '') {
 
@@ -374,10 +374,11 @@ gulp.task('sprite:svg_inl', function() {
 
    else {
      console.log('---------- Сборка Inline SVG спрайта: ОТМЕНА, не используется на проекте');
+     done();
    }
 });
 
-gulp.task('sprite:svg_ext', function() {
+gulp.task('sprite:svg_ext', function(done) {
 
   if(patch.src.svg_sprite_ext && patch.src.svg_sprite_ext != '') {
     console.log('---------- Сборка External SVG спрайта');
@@ -415,6 +416,7 @@ gulp.task('sprite:svg_ext', function() {
    }
    else {
      console.log('---------- Сборка External SVG спрайта: ОТМЕНА, не используется на проекте');
+     done();
    }
 });
 

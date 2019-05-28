@@ -9,8 +9,8 @@
   }
 
   @media (min-width: $screen-lg) {
-    padding-left: 0;
-    padding-right: 0;
     width: ($screen-lg - 148px);
+    padding-left: 74px;
+    padding-right: 74px;
   }
 }
