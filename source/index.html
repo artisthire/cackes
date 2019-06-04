@@ -10,7 +10,7 @@
   <title>Торты на заказ</title>
 </head>
 
-<body class="main-page">
+<body>
   @@include("img/sprite-svg/inline/img/sprite-svg.svg")
 
   @@include("html_templates/main-header.html", {
@@ -38,15 +38,15 @@
 
   </section>
 
-  <section class="products-catalog" id="our_cackes">
+  <section class="container products-catalog" id="our_cackes">
 
     <h3 class="products-catalog__title">Наши торты</h3>
 
     <ul class="products-catalog__list">
 
-      <li class="products-catalog__item product-card product-card--big">
+      <li class="products-catalog__item  products-catalog__item--big">
 
-        <a class="product-card__link" href="#">
+        <a class="product-card" href="#">
 
           <h4 class="product-card__title">Классические</h4>
 
@@ -66,9 +66,9 @@
 
       </li>
 
-      <li class="products-catalog__item product-card">
+      <li class="products-catalog__item">
 
-        <a class="product-card__link" href="#">
+        <a class="product-card" href="#">
 
           <h4 class="product-card__title">Муссовые</h4>
 
@@ -83,9 +83,9 @@
 
       </li>
 
-      <li class="products-catalog__item product-card">
+      <li class="products-catalog__item">
 
-        <a class="product-card__link" href="#">
+        <a class="product-card" href="#">
 
           <h4 class="product-card__title">Свадебные</h4>
 
@@ -100,9 +100,9 @@
 
       </li>
 
-      <li class="products-catalog__item product-card">
+      <li class="products-catalog__item">
 
-        <a class="product-card__link" href="#">
+        <a class="product-card" href="#">
 
           <h4 class="product-card__title">Мужчинам</h4>
 
@@ -117,26 +117,9 @@
 
       </li>
 
-      <li class="products-catalog__item product-card">
+      <li class="products-catalog__item products-catalog__item--big">
 
-        <a class="product-card__link" href="#">
-
-          <h4 class="product-card__title">Женщинам</h4>
-
-          <p class="product-card__desc">16 видов</p>
-
-          <picture class="product-card__img-wrap">
-            <source type="image/webp" srcset="img/Женщинам@1x.webp 1x, img/Женщинам@2x.webp 2x">
-
-            <img class="product-card__img" src="img/Женщинам@1x.jpg" alt="Торт для женщин" srcset="img/Женщинам@2x.jpg 2x" width="242" height="153">
-          </picture>
-        </a>
-
-      </li>
-
-      <li class="products-catalog__item product-card  product-card--big">
-
-        <a class="product-card__link" href="#">
+        <a class="product-card" href="#">
 
           <h4 class="product-card__title">Детские</h4>
 
@@ -155,6 +138,24 @@
         </a>
 
       </li>
+
+      <li class="products-catalog__item">
+
+        <a class="product-card" href="#">
+
+          <h4 class="product-card__title">Женщинам</h4>
+
+          <p class="product-card__desc">16 видов</p>
+
+          <picture class="product-card__img-wrap">
+            <source type="image/webp" srcset="img/Женщинам@1x.webp 1x, img/Женщинам@2x.webp 2x">
+
+            <img class="product-card__img" src="img/Женщинам@1x.jpg" alt="Торт для женщин" srcset="img/Женщинам@2x.jpg 2x" width="242" height="153">
+          </picture>
+        </a>
+
+      </li>
+
     </ul>
 
   </section>

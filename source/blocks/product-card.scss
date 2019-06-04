@@ -1,10 +1,40 @@
-.product-card__link {
+.product-card {
+  position: relative;
+  box-sizing: border-box;
+  display: block;
+  height: 100%;
+  padding: 15px;
   font-family: $font-main;
   text-decoration: none;
   color: inherit;
+  overflow: hidden;
+  background-color: $white;
+
+  &:hover img,
+  &:focus img {
+    opacity: 0.4;
+  }
+
+  @media (min-width: $screen-md) {
+    padding: 15px 30px;
+    box-shadow: 0 10px 13px 0 rgba(#a3063c, 0.05);
+
+    &:hover,
+    &:focus {
+
+      box-shadow: 0 10px 13px 0 rgba(#a3063c, 0.12);
+
+      & img {
+        opacity: 1;
+      }
+    }
+  }
 }
 
 .product-card__title {
+  position: relative;
+  z-index: 2;
+  margin: 0;
   font-family: inherit;
   font-size: 14px;
   font-weight: 400;
@@ -15,6 +45,10 @@
 }
 
 .product-card__desc {
+  position: relative;
+  z-index: 2;
+  margin: 0;
+  margin-bottom: 10px;
   font-size: 12px;
   font-weight: 400;
   color: rgba($text-color, 0.7);
@@ -22,4 +56,22 @@
   @media (min-width: $screen-lg) {
     font-size: 20px;
   }
+}
+
+.product-card__img-wrap {
+  position: absolute;
+  top: -27px;
+  left: 50%;
+  width: 100%;
+  margin-left: -50%;
+
+  @media (min-width: $screen-md) {
+    top: 0;
+  }
+}
+
+.product-card__img {
+  display: block;
+  max-width: none;
+  width: 100%;
 }
