@@ -160,7 +160,7 @@
 
   </section>
 
-  <section class="custom-orders" id="individual_order">
+  <section class="container custom-orders" id="individual_order">
 
     <h3 class="custom-orders__title">Индивидуальный заказ</h3>
 
@@ -174,11 +174,7 @@
           <b class="form-orders__step-number">01</b> Выберите начинку
         </h4>
 
-        @@include("html_templates/stuffing-slider.html", {
-          "img_name": ["Начинка-1", "Начинка-1", "Начинка-1", "Начинка-1", "Начинка-1", "Начинка-1", "Начинка-1", "Начинка-1"],
-          "title": ["Шоколадный ганаш", "Аппельсиновй ганаш", "Клубничный ганаш", "Яблочный ганаш", "Грушевый ганаш", "Огуречный ганаш", "Ореховый ганаш", "Мармеладный ганаш"],
-          "price": [1000, 990, 800, 700, 550, 1200, 999, 666]
-        })
+        @@include("html_templates/stuffing-slider.html")
 
       </div>
 

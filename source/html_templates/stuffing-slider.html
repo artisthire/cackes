@@ -1,53 +1,142 @@
 <div class="form-orders__select-slider stuffing-slider">
 
-  <ul class="stuffing-slider__list">
+  <div class="stuffing-slider__wrap">
 
-    @@for (var i = 0; i < title.length; i++) {
-    <li class="stuffing-slider__item">
+    <!--DEV  Активный слайдер переключается путем добавления стилей stuffing-slider__list:
+    transform: translateX(N * -100%), где N - номер активного слайда (начная с 0) -->
 
-      <p class="stuffing-slider__slider-number">`+(i+1)+`/`+title.length+`</p>
+    <ul class="stuffing-slider__list">
 
-      <div class="stuffing-slider__img-wrap">
-        <picture>
-          <source type="image/webp" media="(min-width: 1366px)" srcset="img/`+img_name[i]+`--lg.webp">
-          <source type="image/webp" media="(min-width: 768px)" srcset="img/`+img_name[i]+`--md.webp">
-          <source type="image/webp" srcset="img/`+img_name[i]+`--sm@1x.webp 1x, img/`+img_name[i]+`--sm@2x.webp 2x">
+      <li class="stuffing-slider__item">
 
-          <source media="(min-width: 1366px)" srcset="img/`+img_name[i]+`--lg.png">
-          <source media="(min-width: 768px)" srcset="img/`+img_name[i]+`--md.png">
+        <p class="stuffing-slider__slider-number">1/12</p>
 
-          <img class="stuffing-slider__img" src="img/`+img_name[i]+`--sm@1x.png" alt="`+title[i]+`" srcset="img/`+img_name[i]+`--sm@2x.png 2x">
-        </picture>
-      </div>
+        <div class="stuffing-slider__img-wrap">
 
-      <p class="stuffing-slider__title">
-        `+title[i]+`
-      </p>
+          <picture>
+            <source type="image/webp" media="(min-width: 1366px)" srcset="img/Начинка-1--lg.webp">
+            <source type="image/webp" media="(min-width: 768px)" srcset="img/Начинка-1--md.webp">
+            <source type="image/webp" srcset="img/Начинка-1--sm@1x.webp 1x, img/Начинка-1--sm@2x.webp 2x">
 
-      <p class="stuffing-slider__desc">
-        Ароматный шоколадный бисквит, густой шоколадный крем – самый шоколадный из всех возможных десертов!
-      </p>
+            <source media="(min-width: 1366px)" srcset="img/Начинка-1--lg.png">
+            <source media="(min-width: 768px)" srcset="img/Начинка-1--md.png">
 
-      <p class="stuffing-slider__price">
-        <b>`+price[i]+` руб/кг</b>
-      </p>
+            <img class="stuffing-slider__img" src="img/Начинка-1--sm@1x.png" alt="Шоколадный ганаш" srcset="img/Начинка-1--sm@2x.png 2x">
+          </picture>
+        </div>
 
-      <button class="btn stuffing-slider__btn" type="button">Выбрать</button>
+        <div class="stuffing-slider__desc-wrap">
 
-    </li>
-    }
+          <p class="stuffing-slider__title">
+            Шоколадный ганаш
+          </p>
 
-  </ul>
+          <p class="stuffing-slider__desc">
+            Ароматный шоколадный бисквит, густой шоколадный крем – самый шоколадный из всех возможных десертов!
+          </p>
 
-  <div class="stuffing-slider__slider-indicator slider-indicator">
-    <span class="select-indicator select-indicator--current"></span>
-    <span class="select-indicator"></span>
-    <span class="select-indicator"></span>
-    <span class="select-indicator"></span>
-    <span class="select-indicator select-indicator--more"></span>
+          <p class="stuffing-slider__price">
+            <b>1000 руб/кг</b>
+          </p>
+
+          <a class="btn stuffing-slider__btn" href="#chocolate">Выбрать</a>
+
+        </div>
+
+      </li>
+
+      <li class="stuffing-slider__item">
+
+        <p class="stuffing-slider__slider-number">2/12</p>
+
+        <div class="stuffing-slider__img-wrap">
+
+          <picture>
+            <source type="image/webp" media="(min-width: 1366px)" srcset="img/Начинка-1--lg.webp">
+            <source type="image/webp" media="(min-width: 768px)" srcset="img/Начинка-1--md.webp">
+            <source type="image/webp" srcset="img/Начинка-1--sm@1x.webp 1x, img/Начинка-1--sm@2x.webp 2x">
+
+            <source media="(min-width: 1366px)" srcset="img/Начинка-1--lg.png">
+            <source media="(min-width: 768px)" srcset="img/Начинка-1--md.png">
+
+            <img class="stuffing-slider__img" src="img/Начинка-1--sm@1x.png" alt="Апельсиновый ганаш" srcset="img/Начинка-1--sm@2x.png 2x">
+          </picture>
+        </div>
+
+        <div class="stuffing-slider__desc-wrap">
+
+          <p class="stuffing-slider__title">
+            Апельсиновый ганаш
+          </p>
+
+          <p class="stuffing-slider__desc">
+            Ароматный шоколадный бисквит, густой шоколадный крем – самый шоколадный из всех возможных десертов!
+          </p>
+
+          <p class="stuffing-slider__price">
+            <b>800 руб/кг</b>
+          </p>
+
+          <a class="btn stuffing-slider__btn" href="#orange">Выбрать</a>
+
+        </div>
+
+      </li>
+
+      <li class="stuffing-slider__item">
+
+        <p class="stuffing-slider__slider-number">3/12</p>
+
+        <div class="stuffing-slider__img-wrap">
+
+          <picture>
+            <source type="image/webp" media="(min-width: 1366px)" srcset="img/Начинка-1--lg.webp">
+            <source type="image/webp" media="(min-width: 768px)" srcset="img/Начинка-1--md.webp">
+            <source type="image/webp" srcset="img/Начинка-1--sm@1x.webp 1x, img/Начинка-1--sm@2x.webp 2x">
+
+            <source media="(min-width: 1366px)" srcset="img/Начинка-1--lg.png">
+            <source media="(min-width: 768px)" srcset="img/Начинка-1--md.png">
+
+            <img class="stuffing-slider__img" src="img/Начинка-1--sm@1x.png" alt="Клубничный ганаш" srcset="img/Начинка-1--sm@2x.png 2x">
+          </picture>
+        </div>
+
+        <div class="stuffing-slider__desc-wrap">
+
+          <p class="stuffing-slider__title">
+           Клубничный ганаш
+          </p>
+
+          <p class="stuffing-slider__desc">
+            Ароматный шоколадный бисквит, густой шоколадный крем – самый шоколадный из всех возможных десертов!
+          </p>
+
+          <p class="stuffing-slider__price">
+            <b>500 руб/кг</b>
+          </p>
+
+          <a class="btn stuffing-slider__btn" href="#strawberry">Выбрать</a>
+
+        </div>
+
+      </li>
+
+    </ul>
   </div>
 
-  <div class="stuffing-slider__slider-control slider-control">
+  <!--DEV Индикатор активного слайда переключается добавлением класса slider-indicator__item--active -->
+
+   <!--DEV Индикатор указания наличия большего количества слайдов переключается добавлением класса slider-indicator__item--more -->
+
+  <div class="stuffing-slider__slider-indicator slider-indicator">
+    <span class="slider-indicator__item slider-indicator__item--active"></span>
+    <span class="slider-indicator__item"></span>
+    <span class="slider-indicator__item"></span>
+    <span class="slider-indicator__item"></span>
+    <span class="slider-indicator__item slider-indicator__item--more"></span>
+  </div>
+
+  <div class="stuffing-slider__slider-control">
     <button class="slider-control slider-control--prev" type="button">
       <span class="visually-hidden">Предыдущий слайд</span>
       <svg role="presentation" aria-hidden="true" width="16" height="16" focusable="false">

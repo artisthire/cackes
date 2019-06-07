@@ -1,6 +1,27 @@
 .form-orders__step {
+  position: relative;
   display: block;
+  margin-bottom: 10px;
+  padding: 15px 20px;
+  padding-bottom: 25px;
   background-color: $white;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  @media (min-width: $screen-md) {
+    margin-bottom: 20px;
+    padding: 45px;
+    padding-bottom: 60px;
+    box-shadow: 0 5px 13px 0 rgba(#a3063c, 0.1);
+  }
+
+  @media (min-width: $screen-lg) {
+    margin-bottom: 30px;
+    padding: 70px 80px;
+    padding-bottom: 95px;
+  }
 }
 
 .form-orders___step-wrapper {
@@ -8,6 +29,8 @@
 }
 
 .form-orders__step-title {
+  margin: 0;
+  margin-bottom: 15px;
   font-family: $font-title;
   font-size: 16px;
   font-weight: 700;
@@ -15,19 +38,28 @@
   color: $order-steps-color;
 
   @media (min-width: $screen-md) {
+    position: absolute;
+    top: 45px;
+    left: 45px;
+    width: 120px;
     font-size: 18px;
   }
 
   @media (min-width: $screen-lg) {
+    top: 70px;
+    left: 80px;
+    width: 195px;
     font-size: 27px;
   }
 }
 
 .form-orders__step-number {
+  margin-right: 10px;
   font-size: (30em/16);
 
   @media (min-width: $screen-md) {
     display: block;
+    margin-bottom: 5px;
     font-size: (36em/18);
   }
 

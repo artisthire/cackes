@@ -1,7 +1,9 @@
 .custom-orders__title {
+  margin: 0;
   font-family: $font-title;
   font-size: 24px;
   font-weight: 700;
+  text-align: center;
 
   @media (min-width: $screen-md) {
     font-size: 28px;
@@ -13,15 +15,20 @@
 }
 
 .custom-orders__desc {
+  margin: 0;
+  margin-bottom: 10px;
   font-family: $font-script;
   font-size: 22px;
   font-weight: 400;
+  text-align: center;
 
   @media (min-width: $screen-md) {
+    margin-bottom: 25px;
     font-size: 26px;
   }
 
   @media (min-width: $screen-lg) {
+    margin-bottom: 35px;
     font-size: 35px;
   }
 }
