@@ -1,13 +1,15 @@
 .slider-indicator {
-  display: block;
+  display: flex;
   width: 100%;
-  font-size: 0;
-  text-align: center;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 .slider-indicator__item {
-  display: inline-block;
-  vertical-align: middle;
+  display: block;
   width: 6px;
   height: 6px;
   margin-left: 5px;

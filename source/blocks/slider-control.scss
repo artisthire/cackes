@@ -1,7 +1,6 @@
 .slider-control {
   position: absolute;
-  display: inline-block;
-  vertical-align: middle;
+  display: block;
   width: 40px;
   height: 40px;
   border-radius: 50%;
@@ -22,14 +21,14 @@
 
   &--prev {
     left: 0;
-
-    & > svg {
-      transform: rotate(180deg);
-    }
   }
 
   &--next {
     right: 0;
+
+    & .slider-control__icon {
+      transform: translate(-10px, -50%) rotate(225deg);
+    }
   }
 
   @media (min-width: $screen-lg) {
@@ -41,13 +40,24 @@
   }
 
   & > svg {
-    position: absolute;
-    top: 50%;
-    left: 50%;
+
     height: 16px;
     width: 16px;
     margin-top: -8px;
     margin-left: -8px;
     fill: #f17d91;
   }
+}
+
+.slider-control__icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: block;
+  width: 11px;
+  height: 11px;
+  border: 2px solid #f17d91;
+  border-top-color: transparent;
+  border-right-color: transparent;
+  transform: translate(-5px, -50%) rotate(45deg);
 }
