@@ -2,58 +2,163 @@
 
   <ul class="decor-slider__list">
 
-    @@for (var i = 0; i < title.length; i++) {
-    <li class="decor-slider_item">
+    <!--DEV  Активный слайд переключается путем добавления классов для элементов decor-slider__item:
 
-      <p class="decor-slider__slider-number">`+(i+1)+`/`+title.length+`</p>
+    1. decor-slider__item--active - текущий активный слайд
+    2. decor-slider__item--active decor-slider__item--left - анимация "выезда" текущего активного слайда слева, по окончанию анимации нужно убрать класс decor-slider__item--left
+    3. decor-slider__item--active decor-slider__item--right - тоже, но справа
+    4. decor-slider__item--prev - анимация сокрытия предыдущего слайда ("заезд" влево), по окончанию класс нужно убрать
+    5. size-slider__item--next - тоже, но сокрытие следующего слайда путем "заезда" вправо
 
-      <div class="decor-slider__img-wrap">
-        <picture>
-          <source type="image/webp" media="(min-width: 1366px)" srcset="img/`+img_name[i]+`--lg.webp">
-          <source type="image/webp" media="(min-width: 768px)" srcset="img/`+img_name[i]+`--md.webp">
-          <source type="image/webp" srcset="img/`+img_name[i]+`--sm@1x.webp 1x, img/`+img_name[i]+`--sm@2x.webp 2x">
+  -->
 
-          <source media="(min-width: 1366px)" srcset="img/`+img_name[i]+`--lg.jpg">
-          <source media="(min-width: 768px)" srcset="img/`+img_name[i]+`--md.jpg">
+    <li class="decor-slider__item decor-slider__item--active">
 
-          <img class="decor-slider__img" src="img/`+img_name[i]+`--sm@1x.jpg" alt="`+title[i]+`" srcset="img/`+img_name[i]+`--sm@2x.jpg 2x">
+      <p class="decor-slider__slider-number">1/35</p>
+
+      <a class="decor-slider__link" href="#marshmellou">
+
+        <picture class="decor-slider__img-wrap">
+          <source type="image/webp" media="(min-width: 1366px)" srcset="img/Оформление-маршмэллоу--lg.webp">
+          <source type="image/webp" media="(min-width: 768px)" srcset="img/Оформление-маршмэллоу--md.webp">
+          <source type="image/webp" srcset="img/Оформление-маршмэллоу--sm@1x.webp 1x, img/Оформление-маршмэллоу--sm@2x.webp 2x">
+
+          <source media="(min-width: 1366px)" srcset="img/Оформление-маршмэллоу--lg.jpg">
+          <source media="(min-width: 768px)" srcset="img/Оформление-маршмэллоу--md.jpg">
+
+          <img class="decor-slider__img" src="img/Оформление-маршмэллоу--sm@1x.jpg" alt="Маршмеллоу" srcset="img/Оформление-маршмэллоу--sm@2x.jpg 2x">
         </picture>
-      </div>
 
-      <p class="decor-slider__title">
-        `+title[i]+`
-      </p>
+        <p class="decor-slider__title">
+          Маршмеллоу
+        </p>
 
-      <p class="decor-slider__price">
-        <b>`+price[i]+` руб/кг</b>
-      </p>
+        <p class="decor-slider__price">
+          <b>600 руб/кг</b>
+        </p>
 
-      <button class="decor-slider__btn btn" type="button">Выбрать</button>
+      </a>
+
+      <a class="decor-slider__btn btn" href="#marshmellou">Выбрать</a>
 
     </li>
-    }
+
+    <li class="decor-slider__item">
+
+      <p class="decor-slider__slider-number">2/35</p>
+
+      <a class="decor-slider__link" href="#assorted">
+
+        <picture class="decor-slider__img-wrap">
+          <source type="image/webp" media="(min-width: 1366px)" srcset="img/Оформление-ягодное--lg.webp">
+          <source type="image/webp" media="(min-width: 768px)" srcset="img/Оформление-ягодное--md.webp">
+          <source type="image/webp" srcset="img/Оформление-ягодное--sm@1x.webp 1x, img/Оформление-ягодное--sm@2x.webp 2x">
+
+          <source media="(min-width: 1366px)" srcset="img/Оформление-ягодное--lg.jpg">
+          <source media="(min-width: 768px)" srcset="img/Оформление-ягодное--md.jpg">
+
+          <img class="decor-slider__img" src="img/Оформление-ягодное--sm@1x.jpg" alt="Ягодное ассорти" srcset="img/Оформление-ягодное--sm@2x.jpg 2x">
+        </picture>
+
+        <p class="decor-slider__title">
+          Ягодное ассорти
+        </p>
+
+        <p class="decor-slider__price">
+          <b>700 руб/кг</b>
+        </p>
+
+      </a>
+
+      <a class="decor-slider__btn btn" href="#assorted">Выбрать</a>
+
+    </li>
+
+    <li class="decor-slider__item">
+
+      <p class="decor-slider__slider-number">3/35</p>
+
+      <a class="decor-slider__link" href="#marshmellou">
+
+        <picture class="decor-slider__img-wrap">
+          <source type="image/webp" media="(min-width: 1366px)" srcset="img/Оформление-маршмэллоу--lg.webp">
+          <source type="image/webp" media="(min-width: 768px)" srcset="img/Оформление-маршмэллоу--md.webp">
+          <source type="image/webp" srcset="img/Оформление-маршмэллоу--sm@1x.webp 1x, img/Оформление-маршмэллоу--sm@2x.webp 2x">
+
+          <source media="(min-width: 1366px)" srcset="img/Оформление-маршмэллоу--lg.jpg">
+          <source media="(min-width: 768px)" srcset="img/Оформление-маршмэллоу--md.jpg">
+
+          <img class="decor-slider__img" src="img/Оформление-маршмэллоу--sm@1x.jpg" alt="Маршмеллоу" srcset="img/Оформление-маршмэллоу--sm@2x.jpg 2x">
+        </picture>
+
+        <p class="decor-slider__title">
+          Маршмеллоу
+        </p>
+
+        <p class="decor-slider__price">
+          <b>600 руб/кг</b>
+        </p>
+
+      </a>
+
+      <a class="decor-slider__btn btn" href="#marshmellou">Выбрать</a>
+
+    </li>
+
+    <li class="decor-slider__item">
+
+      <p class="decor-slider__slider-number">4/35</p>
+
+      <a class="decor-slider__link" href="#assorted">
+
+        <picture class="decor-slider__img-wrap">
+          <source type="image/webp" media="(min-width: 1366px)" srcset="img/Оформление-ягодное--lg.webp">
+          <source type="image/webp" media="(min-width: 768px)" srcset="img/Оформление-ягодное--md.webp">
+          <source type="image/webp" srcset="img/Оформление-ягодное--sm@1x.webp 1x, img/Оформление-ягодное--sm@2x.webp 2x">
+
+          <source media="(min-width: 1366px)" srcset="img/Оформление-ягодное--lg.jpg">
+          <source media="(min-width: 768px)" srcset="img/Оформление-ягодное--md.jpg">
+
+          <img class="decor-slider__img" src="img/Оформление-ягодное--sm@1x.jpg" alt="Ягодное ассорти" srcset="img/Оформление-ягодное--sm@2x.jpg 2x">
+        </picture>
+
+        <p class="decor-slider__title">
+          Ягодное ассорти
+        </p>
+
+        <p class="decor-slider__price">
+          <b>700 руб/кг</b>
+        </p>
+
+      </a>
+
+      <a class="decor-slider__btn btn" href="#assorted">Выбрать</a>
+
+    </li>
+
   </ul>
 
-  <div class="decor-slider__slider-indicator slider-indicator">
-    <span class="select-indicator select-indicator--current"></span>
-    <span class="select-indicator"></span>
-    <span class="select-indicator"></span>
-    <span class="select-indicator"></span>
-    <span class="select-indicator select-indicator--more"></span>
-  </div>
+  <!--DEV
+    1. Индикатор активного слайда переключается добавлением класса slider-indicator__item--active
+    2. Индикатор указания наличия большего количества слайдов переключается добавлением класса slider-indicator__item--more
+  -->
 
-  <div class="decor-slider__slider-control slider-control">
+  <ol class="decor-slider__slider-indicator slider-indicator">
+    <li class="slider-indicator__item slider-indicator__item--active"></li>
+    <li class="slider-indicator__item"></li>
+    <li class="slider-indicator__item"></li>
+    <li class="slider-indicator__item"></li>
+    <li class="slider-indicator__item slider-indicator__item--more"></li>
+  </ol>
+
+  <div class="decor-slider__slider-control">
     <button class="slider-control slider-control--prev" type="button">
       <span class="visually-hidden">Предыдущий слайд</span>
-      <svg role="presentation" aria-hidden="true" width="16" height="16" focusable="false">
-        <use xlink:href="#icon-arrow"></use>
-      </svg>
+      <span class="slider-control__icon" role="presentation" aria-hidden="true"></span>
     </button>
     <button class="slider-control slider-control--next" type="button">
       <span class="visually-hidden">Следующий слайд</span>
-      <svg role="presentation" aria-hidden="true" width="16" height="16" focusable="false">
-        <use xlink:href="#icon-arrow"></use>
-      </svg>
+      <span class="slider-control__icon" role="presentation" aria-hidden="true"></span>
     </button>
   </div>
 

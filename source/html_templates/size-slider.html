@@ -2,11 +2,15 @@
 
   <ol class="size-slider__list">
 
-    <!--DEV  Активный слайд переключается путем добавления классов (только для мобильной версии!):
-    1. Старт показа активного слайда добавлением классов stuffing-slider__item--active и stuffing-slider__item--left (--right) в зависимости от того в какую сторону должен выезжать слайд
-    2. В конеце показа активного слайда оставляем только класс stuffing-slider__item--active
-    3. Предыдущий (следующий) слайд уезжает убирая класс stuffing-slider__item--active, добавляя класс stuffing-slider__item--next (--prev) на время анимации
-    4. В конце анимации из неактивного слайда убираем также классы stuffing-slider__item--next (--prev), оставляя только  stuffing-slider__item-->
+    <!--DEV  Активный слайд переключается путем добавления классов для элементов size-slider__item (согласно дизайна доступно только на мобильной версии):
+
+    1. size-slider__item--active - текущий активный слайд
+    2. size-slider__item--active size-slider__item--left - анимация "выезда" текущего активного слайда слева, по окончанию анимации нужно убрать класс size-slider__item--left
+    3. size-slider__item--active size-slider__item--right - тоже, но справа
+    4. size-slider__item--prev - анимация сокрытия предыдущего слайда ("заезд" влево), по окончанию класс нужно убрать
+    5. size-slider__item--next - тоже, но сокрытие следующего слайда путем "заезда" вправо
+
+  -->
 
     <li class="size-slider__item size-slider__item--active">
 
@@ -70,9 +74,10 @@
 
   </ol>
 
-  <!--DEV Индикатор активного слайда переключается добавлением класса slider-indicator__item--active -->
-
-   <!--DEV Индикатор указания наличия большего количества слайдов переключается добавлением класса slider-indicator__item--more -->
+  <!--DEV
+    1. Индикатор активного слайда переключается добавлением класса slider-indicator__item--active
+    2. Индикатор указания наличия большего количества слайдов переключается добавлением класса slider-indicator__item--more
+  -->
 
   <ol class="size-slider__slider-indicator slider-indicator">
     <li class="slider-indicator__item slider-indicator__item--active"></li>
