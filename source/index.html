@@ -168,7 +168,7 @@
 
     <form class="custom-orders__form form-orders" action="https://echo.htmlacademy.ru/" method="get">
 
-      <div class="form-orders__step" hidden>
+      <div class="form-orders__step">
 
         <h4 class="form-orders__step-title">
           <b class="form-orders__step-number">01</b> Выберите начинку
@@ -178,26 +178,19 @@
 
       </div>
 
-      <div class="form-orders__step" hidden>
+      <div class="form-orders__step">
 
         <h4 class="form-orders__step-title">
           <b class="form-orders__step-number">02</b> Размер
         </h4>
 
-        @@include("html_templates/size-slider.html", {
-          "weight": ["1 кг", "2 кг", "5 кг", "8 кг"],
-          "img_name": ["1-ярус.svg", "1-ярус.svg", "2-яруса.svg", "3-яруса.svg"],
-          "img_alt": ["Один ярус, 1кг", "Один ярус, 2кг", "Два яруса, 5кг", "Три яруса, 8кг"],
-          "descr": ["17-18 см <br>(1 кг - 6 персон)", "23-24 см <br>(10-12 персон)", "Два яруса 25 и 20 см <br>(15-20 персон)", "Три яруса 30, 25 и 18 см <br>(25-30 персон)"],
-          "width": [110, 150, 160, 180],
-          "height": [110, 150, 160, 180]
-        })
+        @@include("html_templates/size-slider.html")
 
       </div>
 
       <div class="form-orders__step">
 
-        <div class="form-orders___step-wrapper" hidden>
+        <div class="form-orders___step-wrapper">
           <h4 class="form-orders__step-title">
            <b class="form-orders__step-number">03</b> Оформление
           </h4>

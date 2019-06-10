@@ -2,29 +2,83 @@
 
   <ol class="size-slider__list">
 
-    @@for (var i = 0; i < weight.length; i++) {
-    <li class="size-slider__item">
+    <!--DEV  Активный слайд переключается путем добавления классов (только для мобильной версии!):
+    1. Старт показа активного слайда добавлением классов stuffing-slider__item--active и stuffing-slider__item--left (--right) в зависимости от того в какую сторону должен выезжать слайд
+    2. В конеце показа активного слайда оставляем только класс stuffing-slider__item--active
+    3. Предыдущий (следующий) слайд уезжает убирая класс stuffing-slider__item--active, добавляя класс stuffing-slider__item--next (--prev) на время анимации
+    4. В конце анимации из неактивного слайда убираем также классы stuffing-slider__item--next (--prev), оставляя только  stuffing-slider__item-->
 
-      <figure class="size-slider__img-wrap">
-        <figcaption class="size-slider__img-title">`+weight[i]+`</figcaption>
-        <img src="img/`+img_name[i]+`" alt="`+img_alt[i]+`" width="`+width[i]+`" height="`+height[i]+`">
-      </figure>
+    <li class="size-slider__item size-slider__item--active">
+
+      <a class="size-slider__img-wrap" href="#1kg">
+        <span class="size-slider__img-title">1 кг</span>
+        <img class="size-slider__img size-slider__img--one" src="img/1-ярус.svg" alt="Один ярус, 1кг" width="110" height="110">
+      </a>
 
       <p class="size-slider__desc">
-        `+descr[i]+`
+        17-18 см <br>(1 кг - 6 персон)
       </p>
 
-      <button class="size-slider__btn btn" type="button">Выбрать</button>
+      <a class="size-slider__btn btn" href="#1kg">Выбрать</a>
 
     </li>
-    }
+
+    <li class="size-slider__item">
+
+      <a class="size-slider__img-wrap" href="#2kg">
+        <span class="size-slider__img-title">2 кг</span>
+        <img class="size-slider__img size-slider__img--two" src="img/1-ярус.svg" alt="Один ярус, 2кг" width="150" height="150">
+      </a>
+
+      <p class="size-slider__desc">
+        23-24 см <br>(10-12 персон)
+      </p>
+
+      <a class="size-slider__btn btn" href="#2kg">Выбрать</a>
+
+    </li>
+
+    <li class="size-slider__item">
+
+      <a class="size-slider__img-wrap" href="#5kg">
+        <span class="size-slider__img-title">5 кг</span>
+        <img class="size-slider__img size-slider__img--five" src="img/2-яруса.svg" alt="Два яруса, 5кг" width="160" height="160">
+      </a>
+
+      <p class="size-slider__desc">
+        Два яруса 25 и 20 см <br>(15-20 персон)
+      </p>
+
+      <a class="size-slider__btn btn" href="#5kg">Выбрать</a>
+
+    </li>
+
+    <li class="size-slider__item">
+
+      <a class="size-slider__img-wrap" href="#8kg">
+        <span class="size-slider__img-title">8 кг</span>
+        <img class="size-slider__img size-slider__img--eight" src="img/3-яруса.svg" alt="Три яруса, 8кг" width="180" height="180">
+      </a>
+
+      <p class="size-slider__desc">
+        Три яруса 30, 25 и 18 см <br>(25-30 персон)
+      </p>
+
+      <a class="size-slider__btn btn" href="#8kg">Выбрать</a>
+
+    </li>
+
   </ol>
 
-  <div class="size-slider__slider-indicator slider-indicator">
-    <span class="select-indicator select-indicator--current"></span>
-    <span class="select-indicator"></span>
-    <span class="select-indicator"></span>
-    <span class="select-indicator"></span>
-  </div>
+  <!--DEV Индикатор активного слайда переключается добавлением класса slider-indicator__item--active -->
+
+   <!--DEV Индикатор указания наличия большего количества слайдов переключается добавлением класса slider-indicator__item--more -->
+
+  <ol class="size-slider__slider-indicator slider-indicator">
+    <li class="slider-indicator__item slider-indicator__item--active"></li>
+    <li class="slider-indicator__item"></li>
+    <li class="slider-indicator__item"></li>
+    <li class="slider-indicator__item"></li>
+  </ol>
 
 </div>
