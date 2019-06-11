@@ -1,9 +1,18 @@
+.no-js .general-orders {
+  display: none;
+}
+
 .general-orders {
   display: block;
+  margin: 0;
+  padding: 0;
   border: none;
 }
 
 .general-orders__title {
+  display: block;
+  margin: 0;
+  margin-bottom: 10px;
   font-family: $font-title;
   font-size: 22px;
   font-weight: 700;
@@ -13,18 +22,60 @@
   }
 
   @media (min-width: $screen-lg) {
+    margin-bottom: 25px;
     font-size: 27px;
   }
 }
 
+.general-orders__inner {
+
+  @media (min-width: $screen-md) {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    flex-wrap: wrap;
+  }
+}
+
+.general-orders__input-wrap {
+  margin: 0;
+  margin-bottom: 10px;
+
+  &:last-of-type {
+    margin-bottom: 30px;
+  }
+
+  @media (min-width: $screen-md) {
+    flex-shrink: 0;
+    margin: 0;
+    margin-right: 15px;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+
+  @media (min-width: $screen-lg) {
+    margin-right: 80px;
+
+    &:last-of-type {
+      margin-right: 10px;
+    }
+  }
+}
+
 .general-orders__label {
+  display: block;
   font-family: $font-script;
   font-size: 20px;
   font-weight: 400;
+  text-align: center;
   color: $order-steps-color;
 
   @media (min-width: $screen-md) {
+    margin-bottom: 10px;
     font-size: 18px;
+    text-align: left;
   }
 
   @media (min-width: $screen-lg) {
@@ -33,25 +84,58 @@
 }
 
 .general-orders__select {
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+  padding: 5px 25px;
   font-family: inherit;
   font-size: 14px;
+  text-align-last: center;
+  border: 1px solid #ddd;
+  border-radius: 15px;
+  background-color: transparent;
+  pointer-events: none;
+  cursor: default;
+  appearance: none;
 
   @media (min-width: $screen-md) {
+    width: auto;
     font-size: 12px;
+
+    &--big {
+      min-width: 160px;
+    }
   }
 
   @media (min-width: $screen-lg) {
+    min-width: 140px;
+    padding: 10px 0;
     font-size: 18px;
+    text-align-last: left;
+    border-color: transparent;
+    border-bottom-color: #c1b0af;
+    border-radius: 0;
+
+    &--big {
+      min-width: 250px;
+    }
   }
 }
 
 .general-orders__submit-btn {
+  display: block;
+  width: 225px;
+  margin: 0 auto;
 
   @media (min-width: $screen-md) {
+    width: 160px;
+    margin: 0;
+    margin-top: 10px;
     font-size: 10px;
   }
 
   @media (min-width: $screen-lg) {
+    width: 225px;
     font-size: 13px;
   }
 }

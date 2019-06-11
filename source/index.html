@@ -190,85 +190,73 @@
 
       <div class="form-orders__step">
 
-        <div class="form-orders___step-wrapper">
-          <h4 class="form-orders__step-title">
-           <b class="form-orders__step-number">03</b> Оформление
-          </h4>
+        <h4 class="form-orders__step-title">
+         <b class="form-orders__step-number">03</b> Оформление
+        </h4>
 
-          @@include("html_templates/decor-slider.html", {
-            "img_name": ["Оформление-маршмэллоу", "Оформление-ягодное", "Оформление-маршмэллоу", "Оформление-ягодное", "Оформление-маршмэллоу", "Оформление-ягодное", "Оформление-маршмэллоу", "Оформление-ягодное"],
-            "title": ["Маршмеллоу", "Ягодное ассорти", "Маршмеллоу", "Ягодное ассорти", "Маршмеллоу", "Ягодное ассорти", "Маршмеллоу", "Ягодное ассорти"],
-            "price": [600, 700, 600, 700, 600, 700, 600, 700]
-          })
+        @@include("html_templates/decor-slider.html")
 
-        </div>
-
-        <fieldset class="form-orders__general general-orders">
+        <fieldset class="general-orders">
 
           <legend class="general-orders__title">
             Ваш выбор
           </legend>
 
-          <p class="general-orders__input-wrap">
+          <div class="general-orders__inner">
 
-            <label class="general-orders__label" for="stuffing">
-              Начинка
-            </label>
+            <p class="general-orders__input-wrap">
 
-            <select class="general-orders__select" id="stuffing" name="stuffing">
+              <label class="general-orders__label" for="stuffing">
+                Начинка
+              </label>
 
-              <option value="Шоколадный ганаш" selected>Шоколадный ганаш - 1000 руб/кг</option>
-              <option value="Аппельсиновй ганаш">Аппельсиновй ганаш - 990 руб/кг</option>
-              <option value="Клубничный ганаш">Клубничный ганаш - 800 руб/кг</option>
-              <option value="Яблочный ганаш">Яблочный ганаш - 700 руб/кг</option>
-              <option value="Грушевый ганаш">Грушевый ганаш - 550 руб/кг</option>
-              <option value="Огуречный ганаш">Огуречный ганаш - 1200 руб/кг</option>
-              <option value="Ореховый ганаш">Ореховый ганаш - 999 руб/кг</option>
-              <option value="Мармеладный ганаш">Мармеладный ганаш - 666 руб/кг</option>
+              <select class="general-orders__select general-orders__select--big" id="stuffing" name="stuffing">
 
-            </select>
+                <option value="chocolate" selected>Шоколадный ганаш</option>
+                <option value="orange">Аппельсиновй ганаш</option>
+                <option value="strawberry">Клубничный ганаш</option>
 
-          </p>
+              </select>
 
-          <p class="general-orders__input-wrap">
+            </p>
 
-            <label class="general-orders__label" for="size">
-              Размер
-            </label>
+            <p class="general-orders__input-wrap">
 
-            <select class="general-orders__select" id="size" name="size">
+              <label class="general-orders__label" for="size">
+                Размер
+              </label>
 
-              <option value="1 кг" selected>1 кг (один ярус, 6 персон)</option>
-              <option value="2 кг">2 кг (один ярус, 10 - 12 персон)</option>
-              <option value="5 кг">5 кг (два яруса, 15 - 20 персон)</option>
-              <option value="8 кг">8 кг (три яруса, 25 - 30 персон)</option>
+              <select class="general-orders__select" id="size" name="size">
 
-            </select>
+                <option value="1kg" selected>1 кг</option>
+                <option value="2kg">2 кг</option>
+                <option value="5kg">5 кг</option>
+                <option value="8kg">8 кг</option>
 
-          </p>
+              </select>
 
-          <p class="general-orders__input-wrap">
+            </p>
 
-            <label class="general-orders__label" for="decor">
-              Оформление
-            </label>
+            <p class="general-orders__input-wrap">
 
-            <select class="general-orders__select" id="decor" name="decor">
+              <label class="general-orders__label" for="decor">
+                Оформление
+              </label>
 
-              <option value="Маршмеллоу" selected>Маршмеллоу - 600 руб/кг</option>
-              <option value="Ягодное ассорти">Ягодное ассорти - 700 руб/кг</option>
-              <option value="Маршмеллоу">Маршмеллоу - 600 руб/кг</option>
-              <option value="Ягодное ассорти">Ягодное ассорти - 700 руб/кг</option>
-              <option value="Маршмеллоу">Маршмеллоу - 600 руб/кг</option>
-              <option value="Ягодное ассорти">Ягодное ассорти - 700 руб/кг</option>
-              <option value="Маршмеллоу">Маршмеллоу - 600 руб/кг</option>
-              <option value="Ягодное ассорти">Ягодное ассорти - 700 руб/кг</option>
+              <select class="general-orders__select general-orders__select--big" id="decor" name="decor">
 
-            </select>
+                <option value="marshmellou" selected>Маршмеллоу</option>
+                <option value="assorted">Ягодное ассорти</option>
+                <option value="marshmellou" selected>Маршмеллоу</option>
+                <option value="assorted">Ягодное ассорти</option>
 
-          </p>
+              </select>
 
-          <button class="btn general-orders__submit-btn" type="submit">Заказать торт</button>
+            </p>
+
+            <button class="btn general-orders__submit-btn" type="submit">Заказать торт</button>
+
+          </div>
 
         </fieldset>
 
