@@ -2,7 +2,7 @@
 
   <ul class="decor-slider__list">
 
-    <!--DEV  Активный слайд переключается путем добавления классов для элементов decor-slider__item:
+  <!--DEV  Активный слайд переключается путем добавления классов для элементов decor-slider__item:
 
     1. decor-slider__item--active - текущий активный слайд
     2. decor-slider__item--active decor-slider__item--left - анимация "выезда" текущего активного слайда слева, по окончанию анимации нужно убрать класс decor-slider__item--left
@@ -10,11 +10,20 @@
     4. decor-slider__item--prev - анимация сокрытия предыдущего слайда ("заезд" влево), по окончанию класс нужно убрать
     5. size-slider__item--next - тоже, но сокрытие следующего слайда путем "заезда" вправо
 
+    На версии от планшета слайды показываются по 2 штуки, поэтому пункты 1 и 2 нужно добавлять одновременно для двух последовательных пунктов списка.
+
+    По умолчанию двум пунктам меню добавлен класс decor-slider__item--active, для их корректного отображения на версии от планшета, поэтому для мобильной версии нужно оставить этот класс только у одного пункта списка, т.к. здесь слайдер на 1 слайд.
+
   -->
 
     <li class="decor-slider__item decor-slider__item--active">
 
-      <p class="decor-slider__slider-number">1/35</p>
+      <!--DEV
+        На версии от планшетной отображается только один номер слайда из двух активных в слайдере
+        Для сокрытия к decor-slider__slider-number добавляется класс decor-slider__slider-number--hidden
+      -->
+
+      <p class="decor-slider__slider-number decor-slider__slider-number--hidden">1/35</p>
 
       <a class="decor-slider__link" href="#marshmellou">
 
@@ -43,7 +52,7 @@
 
     </li>
 
-    <li class="decor-slider__item">
+    <li class="decor-slider__item decor-slider__item--active">
 
       <p class="decor-slider__slider-number">2/35</p>
 
