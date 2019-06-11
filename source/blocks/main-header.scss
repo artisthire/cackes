@@ -6,6 +6,14 @@
   }
 }
 
+.no-js .main-header__inner {
+  display: block;
+
+  @media (min-width: $screen-md) {
+    display: flex;
+  }
+}
+
 .main-header__inner {
   position: relative;
   display: flex;
@@ -55,6 +63,10 @@
     font-size: 23px;
     color: $text-color;
   }
+}
+
+.no-js .main-header__site-navigation {
+  position: static;
 }
 
 .main-header__site-navigation {

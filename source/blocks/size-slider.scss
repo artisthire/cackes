@@ -13,6 +13,10 @@
   }
 }
 
+.no-js .size-slider__list {
+  overflow: auto visible;
+}
+
 .size-slider__list {
   display: flex;
   width: 100%;
@@ -33,6 +37,11 @@
     padding: 0 95px;
     padding-top: 45px;
   }
+}
+
+.no-js .size-slider__item {
+  display: block;
+  margin-bottom: 15px;
 }
 
 .size-slider__item {
@@ -165,6 +174,7 @@
   margin-bottom: 50px;
 
   @media (min-width: $screen-md) {
+    margin-bottom: 15px;
     padding-left: 15px;
     text-align: left;
   }
@@ -181,6 +191,10 @@
   @media (min-width: $screen-md) {
     display: none;
   }
+}
+
+.no-js .size-slider__slider-indicator {
+  display: none;
 }
 
 .size-slider__slider-indicator {
